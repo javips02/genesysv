@@ -28,8 +28,9 @@ def get_values_from_es(dataset_es_index_name,
                        field_es_name,
                        field_path):
 
-    es = elasticsearch.Elasticsearch(
-        host=dataset_es_host, port=dataset_es_port)
+    # es = elasticsearch.Elasticsearch(host=dataset_es_host, port=dataset_es_port)
+    # Changing declaratio of client for elasticsearch 8+ (https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/migration.html#migration-options)
+    es = elasticsearch.Elasticsearch("http://"+dataset_es_host+":"+dataset_es_port)
 
     if not field_path:
         body_non_nested_template = """
@@ -42,9 +43,8 @@ def get_values_from_es(dataset_es_index_name,
                 }
             }
         """
-        body = body_non_nested_template % (field_es_name)
-        results = es.search(index=dataset_es_index_name,
-                            body=body, request_timeout=120)
+        body = json.loads(body_non_nested_template % (field_es_name))
+        results = es.search(index=dataset_es_index_name, body=body, request_timeout=120)
         return natsorted([ele['key'] for ele in results["aggregations"]["values"]["buckets"] if ele['key']])
 
     elif field_path:
@@ -63,12 +63,12 @@ def get_values_from_es(dataset_es_index_name,
                 }
             }
         """
-        body = body_nested_template % (field_path,
-                                       field_path,
-                                       field_es_name)
+        body = json.loads(body_nested_template % (field_path,
+                              field_path,
+                              field_es_name))
 
         results = es.search(index=dataset_es_index_name,
-                            body=body, request_timeout=240)
+                    body=body, request_timeout=240)
         return natsorted([ele['key'] for ele in results["aggregations"]["values"]["values"]["buckets"] if ele['key']])
 
 

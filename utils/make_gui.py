@@ -917,8 +917,8 @@ def make_gui(es, hostname, port, index_name, study, dataset,  vcf_gui_mapping):
 
         add_required_data_to_db()
 
-        mapping = elasticsearch.client.IndicesClient.get_mapping(
-            es, index=index_name) #, doc_type=type_name)
+        #mapping = elasticsearch.client.IndicesClient.get_mapping(es, index=index_name) #, doc_type=type_name)
+        mapping = es.indices.get_mapping(index=index_name)
         mapping = mapping[index_name]['mappings']['properties']
 
         nested_fields = []

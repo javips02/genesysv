@@ -1,0 +1,4325 @@
+{
+  "1000g2015aug_afr": {
+    "filters": [
+      {
+        "display_text": "1000g2015aug_afr",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "African Population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "1000 Genomes Project (Aug. 2015)",
+    "tab": "Basic"
+  },
+  "1000g2015aug_all": {
+    "filters": [
+      {
+        "display_text": "1000g2015aug_all",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "All available population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "1000 Genomes Project (Aug. 2015)",
+    "tab": "Basic"
+  },
+  "1000g2015aug_amr": {
+    "filters": [
+      {
+        "display_text": "1000g2015aug_amr",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "Admixed American",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "1000 Genomes Project (Aug. 2015)",
+    "tab": "Basic"
+  },
+  "1000g2015aug_eur": {
+    "filters": [
+      {
+        "display_text": "1000g2015aug_eur",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "European Population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "1000 Genomes Project (Aug. 2015)",
+    "tab": "Basic"
+  },
+  "1000g2015aug_sas": {
+    "filters": [
+      {
+        "display_text": "1000g2015aug_sas",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "South Asian Population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "1000 Genomes Project (Aug. 2015)",
+    "tab": "Basic"
+  },
+  "AC": {
+    "filters": [
+      {
+        "display_text": "AC",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Allele count in genotypes, for each ALT allele, in the same order as listed",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "AC",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Summary Statistics Information",
+    "tab": "Basic"
+  },
+  "AD_alt": {
+    "filters": [
+      {
+        "display_text": "AD_alt",
+        "es_filter_type": "nested_filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "path": "sample",
+        "tooltip": "Allelic depths for the ref and alt alleles in the order listed",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "AD_ref": {
+    "filters": [
+      {
+        "display_text": "AD_ref",
+        "es_filter_type": "nested_filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "path": "sample",
+        "tooltip": "Allelic depths for the ref and alt alleles in the order listed",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "AF": {
+    "filters": [
+      {
+        "display_text": "AF",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Allele Frequency, for each ALT allele, in the same order as listed",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "AF",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Summary Statistics Information",
+    "tab": "Basic"
+  },
+  "ALT": {
+    "filters": [
+      {
+        "display_text": "ALT",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Related Information",
+    "tab": "Basic"
+  },
+  "AN": {
+    "filters": [
+      {
+        "display_text": "AN",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Total number of alleles in called genotypes",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "AN",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Summary Statistics Information",
+    "tab": "Basic"
+  },
+  "Affected_Siblings_Ages": {
+    "filters": [
+      {
+        "display_text": "Affected_Siblings_Ages",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "Affected_Siblings_Genotypes": {
+    "filters": [
+      {
+        "display_text": "Affected_Siblings_Genotypes",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "Affected_Siblings_IDs": {
+    "filters": [
+      {
+        "display_text": "Affected_Siblings_IDs",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "Affected_Siblings_Sex": {
+    "filters": [
+      {
+        "display_text": "Affected_Siblings_Sex",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "(1 = Male, 2 = Female)",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "Age": {
+    "filters": [
+      {
+        "display_text": "Age",
+        "es_filter_type": "nested_filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "path": "sample",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "BA1": {
+    "filters": [
+      {
+        "display_text": "BA1",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Allele frequency is >5% in Exome Sequencing Project, 1000 Genomes Project, or Exome Aggregation Consortium",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "BP1": {
+    "filters": [
+      {
+        "display_text": "BP1",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Missense variant in a gene for which primarily truncating variants are known to cause disease",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "BP2": {
+    "filters": [
+      {
+        "display_text": "BP2",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Observed in trans with a pathogenic variant for a fully penetrant dominant gene/disorder or observed in cis with a pathogenic variant in any inheritance pattern",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "BP3": {
+    "filters": [
+      {
+        "display_text": "BP3",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "In-frame deletions/insertions in a repetitive region without a known function",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "BP4": {
+    "filters": [
+      {
+        "display_text": "BP4",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Multiple lines of computational evidence suggest no impact on gene or gene product (conservation, evolutionary, splicing impact, etc.)",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "BP5": {
+    "filters": [
+      {
+        "display_text": "BP5",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Variant found in a case with an alternate molecular basis for disease",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "BP6": {
+    "filters": [
+      {
+        "display_text": "BP6",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Reputable source recently reports variant as benign, but the evidence is not available to the laboratory to perform an independent evaluation",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "BP7": {
+    "filters": [
+      {
+        "display_text": "BP7",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "A synonymous (silent) variant for which splicing prediction algorithms predict no impact to the splice consensus sequence nor the creation of a new splice site AND the nucleotide is not highly conserved",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "BS1": {
+    "filters": [
+      {
+        "display_text": "BS1",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Allele frequency is greater than expected for disorder",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "BS2": {
+    "filters": [
+      {
+        "display_text": "BS2",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Observed in a healthy adult individual for a recessive (homozygous), dominant (heterozygous), or X-linked (hemizygous) disorder, with full penetrance expected at an early age",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "BS3": {
+    "filters": [
+      {
+        "display_text": "BS3",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Well-established in vitro or in vivo functional studies show no damaging effect on protein function or splicing",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "BS4": {
+    "filters": [
+      {
+        "display_text": "BS4",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Well-established in vitro or in vivo functional studies show no damaging effect on protein function or splicing",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "BaseQRankSum": {
+    "filters": [
+      {
+        "display_text": "BaseQRankSum",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Z-score from Wilcoxon rank sum test of Alt Vs. Ref base qualities",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "BaseQRankSum",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Quality Metrix",
+    "tab": "Basic"
+  },
+  "CADD13_PHRED": {
+    "filters": [
+      {
+        "display_text": "CADD13_PHRED",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "CADD13_PHRED annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "CADD13_RawScore": {
+    "filters": [
+      {
+        "display_text": "CADD13_RawScore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "CADD13_RawScore annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "CADD_Phred_score": {
+    "filters": [
+      {
+        "display_text": "CADD_Phred_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "CADD_Phred_score annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "CADD_phred": {
+    "filters": [
+      {
+        "display_text": "CADD_phred",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) CADD phred-like score. This is phred-like rank score based on whole genome CADD raw scores. Please refer to Kircher et al. (2014) Nature Genetics 46(3):310-5 for details. The larger the score the more likely the SNP has damaging effect. Please note the following copyright statement for CADD: 'CADD scores (http://cadd.gs.washington.edu/) are Copyright 2013 University of Washington and Hudson-Alpha Institute for Biotechnology (all rights reserved) but are freely available for all academic, non-commercial applications. For commercial licensing information contact Jennifer McCullar (mccullaj@uw.edu).'",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "CADD_raw": {
+    "filters": [
+      {
+        "display_text": "CADD_raw",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) CADD raw score for functional prediction of a SNP. Please refer to Kircher et al. (2014) Nature Genetics 46(3):310-5 for details. The larger the score the more likely the SNP has damaging effect. Scores range from -6.458163 to 18.301497 in dbNSFP. Please note the following copyright statement for CADD: 'CADD scores (http://cadd.gs.washington.edu/) are Copyright 2013 University of Washington and Hudson-Alpha Institute for Biotechnology (all rights reserved) but are freely available for all academic, non-commercial applications. For commercial licensing information contact Jennifer McCullar (mccullaj@uw.edu).'",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "CADD_raw_rankscore": {
+    "filters": [
+      {
+        "display_text": "CADD_raw_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) CADD raw scores were ranked among all CADD raw scores in dbNSFP. The rankscore is the ratio of the rank of the score over the total number of CADD raw scores in dbNSFP. Please note the following copyright statement for CADD: 'CADD scores (http://cadd.gs.washington.edu/) are Copyright 2013 University of Washington and Hudson-Alpha Institute for Biotechnology (all rights reserved) but are freely available for all academic, non-commercial applications. For commercial licensing information contact Jennifer McCullar (mccullaj@uw.edu).'",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "CADD_score": {
+    "filters": [
+      {
+        "display_text": "CADD_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "CADD_score annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "CHROM": {
+    "filters": [
+      {
+        "display_text": "CHROM",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Variant Related Information",
+    "tab": "Basic"
+  },
+  "CLNALLELEID": {
+    "filters": [
+      {
+        "display_text": "CLNALLELEID",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "CLNALLELEID annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "CLINVAR",
+    "tab": "Basic"
+  },
+  "CLNDN": {
+    "filters": [
+      {
+        "display_text": "CLNDN",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "path": "CLNVAR_nested",
+        "tooltip": "Disease Name",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "CLINVAR",
+    "tab": "Basic"
+  },
+  "CLNREVSTAT": {
+    "filters": [
+      {
+        "display_text": "CLNREVSTAT",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "path": "CLNVAR_nested",
+        "tooltip": "ClinVar review status",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "CLINVAR",
+    "tab": "Basic"
+  },
+  "CLNSIG": {
+    "filters": [
+      {
+        "display_text": "CLNSIG",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "path": "CLNVAR_nested",
+        "tooltip": "ClinVar Significance",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "CLINVAR",
+    "tab": "Basic"
+  },
+  "CLNVAR_nested": {
+    "filters": [
+      {
+        "display_text": "CLNVAR_nested",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Other",
+    "tab": "Basic"
+  },
+  "COSMIC_Cancer_Site": {
+    "filters": [
+      {
+        "display_text": "COSMIC_Cancer_Site",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "path": "COSMIC_nested",
+        "tooltip": "",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "COSMIC",
+    "tab": "Basic"
+  },
+  "COSMIC_ID": {
+    "filters": [
+      {
+        "display_text": "COSMIC_ID",
+        "es_filter_type": "filter_terms",
+        "form_type": "CharField",
+        "in_line_tooltip": "(One ID per line)",
+        "tooltip": "COSMIC_ID annotation provided by ANNOVAR",
+        "widget_type": "UploadField"
+      },
+      {
+        "display_text": "Limit Variants to COSMIC_ID",
+        "es_filter_type": "filter_exists",
+        "form_type": "ChoiceField",
+        "tooltip": "COSMIC_ID annotation provided by ANNOVAR",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "COSMIC",
+    "tab": "Basic"
+  },
+  "COSMIC_Occurrence": {
+    "filters": [
+      {
+        "display_text": "COSMIC_Occurrence",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "path": "COSMIC_nested",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "COSMIC",
+    "tab": "Basic"
+  },
+  "COSMIC_nested": {
+    "filters": [
+      {
+        "display_text": "COSMIC_nested",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Other",
+    "tab": "Basic"
+  },
+  "COVEC_WMV": {
+    "filters": [
+      {
+        "display_text": "COVEC_WMV",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "COVEC_WMV annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "COVEC_WMV_prediction": {
+    "filters": [
+      {
+        "display_text": "COVEC_WMV_prediction",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "COVEC_WMV_prediction annotation provided by ANNOVAR",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "Carol_prediction": {
+    "filters": [
+      {
+        "display_text": "Carol_prediction",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "Carol_prediction annotation provided by ANNOVAR",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "Carol_score": {
+    "filters": [
+      {
+        "display_text": "Carol_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Carol_score annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "ClippingRankSum": {
+    "filters": [
+      {
+        "display_text": "ClippingRankSum",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Z-score From Wilcoxon rank sum test of Alt vs. Ref number of hard clipped bases",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "ClippingRankSum",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Quality Metrix",
+    "tab": "Basic"
+  },
+  "Condel_pred": {
+    "filters": [
+      {
+        "display_text": "Condel_pred",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "Condel_pred annotation provided by ANNOVAR",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "Condel_score": {
+    "filters": [
+      {
+        "display_text": "Condel_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Condel_score annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "DANN_rankscore": {
+    "filters": [
+      {
+        "display_text": "DANN_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) DANN scores were ranked among all DANN scores in dbNSFP. The rankscore is the ratio of the rank of the score over the total number of DANN scores in dbNSFP.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "DANN_score": {
+    "filters": [
+      {
+        "display_text": "DANN_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) DANN is a functional prediction score retrained based on the training data of CADD using deep neural network. Scores range from 0 to 1. A larger number indicate a higher probability to be damaging. More information of this score can be found in doi: 10.1093/bioinformatics/btu703.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "DP": {
+    "filters": [
+      {
+        "display_text": "DP",
+        "es_filter_type": "nested_filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "path": "sample",
+        "tooltip": "Approximate read depth (reads with MQ=255 or with bad mates are filtered)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "Distance_to_downstream_ensGene": {
+    "filters": [
+      {
+        "display_text": "Distance_to_downstream_ensGene",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(bp, <=)",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "Ensembl Identifier, Variants in Non-Coding Region",
+    "tab": "Basic"
+  },
+  "Distance_to_downstream_refGene": {
+    "filters": [
+      {
+        "display_text": "Distance_to_downstream_refGene",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(bp, <=)",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "NCBI Identifier, Variants in Non-Coding Region",
+    "tab": "Basic"
+  },
+  "Distance_to_upstream_ensGene": {
+    "filters": [
+      {
+        "display_text": "Distance_to_upstream_ensGene",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(bp, <=)",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "Ensembl Identifier, Variants in Non-Coding Region",
+    "tab": "Basic"
+  },
+  "Distance_to_upstream_refGene": {
+    "filters": [
+      {
+        "display_text": "Distance_to_upstream_refGene",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(bp, <=)",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "NCBI Identifier, Variants in Non-Coding Region",
+    "tab": "Basic"
+  },
+  "Downstream_ensGene": {
+    "filters": [
+      {
+        "display_text": "Downstream_ensGene",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "Ensembl Identifier, Variants in Non-Coding Region",
+    "tab": "Basic"
+  },
+  "Downstream_refGene": {
+    "filters": [
+      {
+        "display_text": "Downstream_refGene",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "NCBI Identifier, Variants in Non-Coding Region",
+    "tab": "Basic"
+  },
+  "EFIN_HumDiv_Score": {
+    "filters": [
+      {
+        "display_text": "EFIN_HumDiv_Score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "EFIN_HumDiv_Score annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "EFIN_Swiss_Prot_Prediction": {
+    "filters": [
+      {
+        "display_text": "EFIN_Swiss_Prot_Prediction",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "EFIN_Swiss_Prot_Prediction annotation provided by ANNOVAR",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "EFIN_Swiss_Prot_Score": {
+    "filters": [
+      {
+        "display_text": "EFIN_Swiss_Prot_Score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "EFIN_Swiss_Prot_Score annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "END": {
+    "filters": [
+      {
+        "display_text": "END",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Stop position of the interval",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "END",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "tooltip": "Stop position of the interval",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Related Information",
+    "tab": "Basic"
+  },
+  "Eigen": {
+    "filters": [
+      {
+        "display_text": "Eigen",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Eigen annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "Eigen-PC-raw": {
+    "filters": [
+      {
+        "display_text": "Eigen-PC-raw",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Eigen-PC-raw annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "Eigen-raw": {
+    "filters": [
+      {
+        "display_text": "Eigen-raw",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Eigen-raw annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "Ensembl_Gene_ID": {
+    "filters": [
+      {
+        "display_text": "Ensembl Gene ID",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "CharField",
+        "in_line_tooltip": "(e.g. ENSG00000248396)",
+        "path": "AAChange_ensGene",
+        "tooltip": "Ensembl_Gene_ID annotation provided by ANNOVAR",
+        "widget_type": "UploadField"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "Ensembl Identifier, Variants in Coding Region",
+    "tab": "Basic"
+  },
+  "Ensembl_Transcript_ID": {
+    "filters": [
+      {
+        "display_text": "Ensembl transcript ID",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "CharField",
+        "in_line_tooltip": "(e.g. ENST00000460472)",
+        "path": "AAChange_ensGene",
+        "tooltip": "",
+        "widget_type": "UploadField"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "Ensembl Identifier, Variants in Coding Region",
+    "tab": "Basic"
+  },
+  "ExAC_AFR": {
+    "filters": [
+      {
+        "display_text": "ExAC_AFR",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "African population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_ALL": {
+    "filters": [
+      {
+        "display_text": "ExAC_ALL",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "All available population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_AMR": {
+    "filters": [
+      {
+        "display_text": "ExAC_AMR",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "Admixed American Population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_EAS": {
+    "filters": [
+      {
+        "display_text": "ExAC_EAS",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "East Asian population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_FIN": {
+    "filters": [
+      {
+        "display_text": "ExAC_FIN",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "Finnish population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_NFE": {
+    "filters": [
+      {
+        "display_text": "ExAC_NFE",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "Non-Finnish European population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_OTH": {
+    "filters": [
+      {
+        "display_text": "ExAC_OTH",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "Other population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_SAS": {
+    "filters": [
+      {
+        "display_text": "ExAC_SAS",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "South Asian population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nonpsych_AFR": {
+    "filters": [
+      {
+        "display_text": "ExAC_nonpsych_AFR",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "African population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nonpsych_ALL": {
+    "filters": [
+      {
+        "display_text": "ExAC_nonpsych_ALL",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "All available population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nonpsych_AMR": {
+    "filters": [
+      {
+        "display_text": "ExAC_nonpsych_AMR",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "Admixed American",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nonpsych_EAS": {
+    "filters": [
+      {
+        "display_text": "ExAC_nonpsych_EAS",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "East Asian",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nonpsych_FIN": {
+    "filters": [
+      {
+        "display_text": "ExAC_nonpsych_FIN",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "Finnish population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nonpsych_NFE": {
+    "filters": [
+      {
+        "display_text": "ExAC_nonpsych_NFE",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "Non-Finnish European Population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nonpsych_OTH": {
+    "filters": [
+      {
+        "display_text": "ExAC_nonpsych_OTH",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "Other population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nonpsych_SAS": {
+    "filters": [
+      {
+        "display_text": "ExAC_nonpsych_SAS",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "South Asian Population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nontcga_AFR": {
+    "filters": [
+      {
+        "display_text": "ExAC_nontcga_AFR",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "African Population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nontcga_ALL": {
+    "filters": [
+      {
+        "display_text": "ExAC_nontcga_ALL",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "All available population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nontcga_AMR": {
+    "filters": [
+      {
+        "display_text": "ExAC_nontcga_AMR",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "Admixed American Population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nontcga_EAS": {
+    "filters": [
+      {
+        "display_text": "ExAC_nontcga_EAS",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "East Asian Population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nontcga_FIN": {
+    "filters": [
+      {
+        "display_text": "ExAC_nontcga_FIN",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "Finnish Population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nontcga_NFE": {
+    "filters": [
+      {
+        "display_text": "ExAC_nontcga_NFE",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "Non-Finnish European Population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nontcga_OTH": {
+    "filters": [
+      {
+        "display_text": "ExAC_nontcga_OTH",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "Other population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExAC_nontcga_SAS": {
+    "filters": [
+      {
+        "display_text": "ExAC_nontcga_SAS",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "South Asian Population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "The Exome Aggregation Consortium (ExAC)",
+    "tab": "Basic"
+  },
+  "ExcessHet": {
+    "filters": [
+      {
+        "display_text": "ExcessHet",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Phred-scaled p-value for exact test of excess heterozygosity",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "ExcessHet",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Quality Metrix",
+    "tab": "Basic"
+  },
+  "ExonicFunc_ensGene": {
+    "filters": [
+      {
+        "display_text": "ExonicFunc_ensGene",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "ExonicFunc.ensGene annotation provided by ANNOVAR",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Functional Consequences",
+    "sub_panel": "Ensembl",
+    "tab": "Basic"
+  },
+  "ExonicFunc_refGene": {
+    "filters": [
+      {
+        "display_text": "ExonicFunc_refGene",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "ExonicFunc.refGene annotation provided by ANNOVAR",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Functional Consequences",
+    "sub_panel": "NCBI",
+    "tab": "Basic"
+  },
+  "FATHMM_converted_rankscore": {
+    "filters": [
+      {
+        "display_text": "FATHMM_converted_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) FATHMMori scores were first converted to FATHMMnew=1-(FATHMMori+16.13)/26.77, then ranked among all FATHMMnew scores in dbNSFP. The rankscore is the ratio of the rank of the score over the total number of FATHMMnew scores in dbNSFP. If there are multiple scores, only the most damaging (largest) rankscore is presented. The scores range from 0 to 1.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "FATHMM_pred": {
+    "filters": [
+      {
+        "display_text": "FATHMM_pred",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "(from dbNSFP) If a FATHMMori score is <=-1.5 (or rankscore >=0.81332) the corresponding nsSNV is predicted as 'D(AMAGING)'; otherwise it is predicted as 'T(OLERATED)'. Multiple predictions separated by ';', corresponding to Ensembl_proteinid.",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "FATHMM_score": {
+    "filters": [
+      {
+        "display_text": "FATHMM_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) FATHMM default score (weighted for human inherited-disease mutations with Disease Ontology) (FATHMMori). Scores range from -16.13 to 10.64. The smaller the score the more likely the SNP has damaging effect. Multiple scores separated by ';', corresponding to Ensembl_proteinid.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "FILTER": {
+    "filters": [
+      {
+        "display_text": "FILTER",
+        "es_filter_type": "filter_term",
+        "form_type": "MultipleChoiceField",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Variant Quality Metrix",
+    "tab": "Basic"
+  },
+  "FS": {
+    "filters": [
+      {
+        "display_text": "FS",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Phred-scaled p-value using Fisher's exact test to detect strand bias",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "FS",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Quality Metrix",
+    "tab": "Basic"
+  },
+  "Family_ID": {
+    "filters": [
+      {
+        "display_text": "Family_ID",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "FatHmm_prediction": {
+    "filters": [
+      {
+        "display_text": "FatHmm_prediction",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "FatHmm_prediction annotation provided by ANNOVAR",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "FatHmm_score": {
+    "filters": [
+      {
+        "display_text": "FatHmm_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "FatHmm_score annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "Father_Genotype": {
+    "filters": [
+      {
+        "display_text": "Father_Genotype",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "Father_ID": {
+    "filters": [
+      {
+        "display_text": "Father_ID",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "Father_Phenotype": {
+    "filters": [
+      {
+        "display_text": "Father_Phenotype",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "(1 = Unaffected, 2 = Affected)",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "Func_ensGene": {
+    "filters": [
+      {
+        "display_text": "Func_ensGene",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "Func.ensGene annotation provided by ANNOVAR",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Functional Consequences",
+    "sub_panel": "Ensembl",
+    "tab": "Basic"
+  },
+  "Func_refGene": {
+    "filters": [
+      {
+        "display_text": "Func_refGene",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "Func.refGene annotation provided by ANNOVAR",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Functional Consequences",
+    "sub_panel": "NCBI",
+    "tab": "Basic"
+  },
+  "GERP++_RS": {
+    "filters": [
+      {
+        "display_text": "GERP++_RS",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) GERP++ RS score, the larger the score, the more conserved the site. Scores range from -12.3 to 6.17.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "GERP++_RS_rankscore": {
+    "filters": [
+      {
+        "display_text": "GERP++_RS_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) GERP++ RS scores were ranked among all GERP++ RS scores in dbNSFP. The rankscore is the ratio of the rank of the score over the total number of GERP++ RS scores in dbNSFP.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "GQ": {
+    "filters": [
+      {
+        "display_text": "GQ",
+        "es_filter_type": "nested_filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "path": "sample",
+        "tooltip": "Genotype Quality",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "GT": {
+    "filters": [
+      {
+        "display_text": "GT",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "GTEx_V6_gene": {
+    "filters": [
+      {
+        "display_text": "GTEx_V6_gene",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "CharField",
+        "path": "GTEx_nested",
+        "tooltip": "Genotype-Tissue Expression",
+        "widget_type": "UploadField"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "Other",
+    "tab": "Basic"
+  },
+  "GTEx_V6_tissue": {
+    "filters": [
+      {
+        "display_text": "GTEx_V6_tissue",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "path": "GTEx_nested",
+        "tooltip": "Genotype-Tissue Expression",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "Other",
+    "tab": "Basic"
+  },
+  "GTEx_nested": {
+    "filters": [
+      {
+        "display_text": "GTEx_nested",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Other",
+    "tab": "Basic"
+  },
+  "Gene": {
+    "filters": [
+      {
+        "display_text": "Gene",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "CharField",
+        "in_line_tooltip": "(e.g. RYR1, KRAS, one ID per line)",
+        "path": "AAChange_refGene",
+        "tooltip": "",
+        "widget_type": "UploadField"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "NCBI Identifier, Variants in Coding Region",
+    "tab": "Basic"
+  },
+  "GeneDetail_ensGene": {
+    "filters": [
+      {
+        "display_text": "GeneDetail_ensGene",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "GeneDetail.ensGene annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "Ensembl Identifier, Variants in Non-Coding Region",
+    "tab": "Basic"
+  },
+  "GeneDetail_refGene": {
+    "filters": [
+      {
+        "display_text": "GeneDetail_refGene",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "GeneDetail.refGene annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "NCBI Identifier, Variants in Non-Coding Region",
+    "tab": "Basic"
+  },
+  "GenoCanyon_score": {
+    "filters": [
+      {
+        "display_text": "GenoCanyon_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) A functional prediction score based on conservation and biochemical annotations using an unsupervised statistical learning. (doi:10.1038/srep10576)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "GenoCanyon_score_rankscore": {
+    "filters": [
+      {
+        "display_text": "GenoCanyon_score_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "GenoCanyon_score_rankscore annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "HaplotypeScore": {
+    "filters": [
+      {
+        "display_text": "HaplotypeScore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Consistency of the site with at most two segregating haplotypes",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "HaplotypeScore",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Quality Metrix",
+    "tab": "Basic"
+  },
+  "ICGC_Allele_Count": {
+    "filters": [
+      {
+        "display_text": "ICGC_Allele_Count",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "path": "ICGC_nested",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ICGC",
+    "tab": "Basic"
+  },
+  "ICGC_Allele_Frequency": {
+    "filters": [
+      {
+        "display_text": "ICGC_Allele_Frequency",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "path": "ICGC_nested",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ICGC",
+    "tab": "Basic"
+  },
+  "ICGC_Allele_Number": {
+    "filters": [
+      {
+        "display_text": "ICGC_Allele_Number",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "path": "ICGC_nested",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ICGC",
+    "tab": "Basic"
+  },
+  "ICGC_Cancer_Site": {
+    "filters": [
+      {
+        "display_text": "ICGC_Cancer_Site",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "path": "ICGC_nested",
+        "tooltip": "",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ICGC",
+    "tab": "Basic"
+  },
+  "ICGC_ID": {
+    "filters": [
+      {
+        "display_text": "ICGC_ID",
+        "es_filter_type": "filter_terms",
+        "form_type": "CharField",
+        "in_line_tooltip": "(One ID per line)",
+        "tooltip": "",
+        "widget_type": "UploadField"
+      },
+      {
+        "display_text": "Limit Variants to ICGC_ID",
+        "es_filter_type": "filter_exists",
+        "form_type": "ChoiceField",
+        "tooltip": "",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ICGC",
+    "tab": "Basic"
+  },
+  "ICGC_nested": {
+    "filters": [
+      {
+        "display_text": "ICGC_nested",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Other",
+    "tab": "Basic"
+  },
+  "ID": {
+    "filters": [
+      {
+        "display_text": "ID",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "in_line_tooltip": "(from original VCF)",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Related Information",
+    "tab": "Basic"
+  },
+  "InbreedingCoeff": {
+    "filters": [
+      {
+        "display_text": "InbreedingCoeff",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Inbreeding coefficient as estimated from the genotype likelihoods per-sample when compared against the Hardy-Weinberg expectation",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "InbreedingCoeff",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Quality Metrix",
+    "tab": "Basic"
+  },
+  "InterVar_automated": {
+    "filters": [
+      {
+        "display_text": "InterVar_automated",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Clinical Interpretation of genetic variants by ACMG/AMP 2015 guideline",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "Interpro_domain": {
+    "filters": [
+      {
+        "display_text": "Interpro_domain",
+        "es_filter_type": "filter_term",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "(from dbNSFP) domain or conserved site on which the variant locates. Domain annotations come from Interpro database. The number in the brackets following a specific domain is the count of times Interpro assigns the variant position to that domain, typically coming from different predicting databases. Multiple entries separated by ';'.",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "Other",
+    "tab": "Basic"
+  },
+  "Kaviar_AC": {
+    "filters": [
+      {
+        "display_text": "Kaviar_AC",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Kaviar_AC annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "Kaviar_AC",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "tooltip": "Kaviar_AC annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "Allele Count/Number",
+    "tab": "Basic"
+  },
+  "Kaviar_AF": {
+    "filters": [
+      {
+        "display_text": "Kaviar_AF",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "170 million Known VARiants from 13K genomes and 64K exomes in 34 projects",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "tab": "Basic"
+  },
+  "Kaviar_AN": {
+    "filters": [
+      {
+        "display_text": "Kaviar_AN",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Kaviar_AN annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "Kaviar_AN",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "tooltip": "Kaviar_AN annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "Allele Count/Number",
+    "tab": "Basic"
+  },
+  "LRT_converted_rankscore": {
+    "filters": [
+      {
+        "display_text": "LRT_converted_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) LRTori scores were first converted as LRTnew=1-LRTori*0.5 if Omega<1, or LRTnew=LRTori*0.5 if Omega>=1. Then LRTnew scores were ranked among all LRTnew scores in dbNSFP. The rankscore is the ratio of the rank over the total number of the scores in dbNSFP. The scores range from 0.00162 to 0.8433.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "LRT_pred": {
+    "filters": [
+      {
+        "display_text": "LRT_pred",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "(from dbNSFP) LRT prediction, D(eleterious), N(eutral) or U(nknown), which is not solely determined by the score.",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "LRT_score": {
+    "filters": [
+      {
+        "display_text": "LRT_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) The original LRT two-sided p-value (LRTori), ranges from 0 to 1.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "M-CAP_pred": {
+    "filters": [
+      {
+        "display_text": "M-CAP_pred",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "(from dbNSFP) Prediction of M-CAP score based on the authors' recommendation, 'T(olerated)' or 'D(amaging)'. The score cutoff between 'D' and 'T' is 0.025.",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "M-CAP_rankscore": {
+    "filters": [
+      {
+        "display_text": "M-CAP_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) M-CAP scores were ranked among all M-CAP scores in dbNSFP. The rankscore is the ratio of the rank of the score over the total number of M-CAP scores in dbNSFP.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "M-CAP_score": {
+    "filters": [
+      {
+        "display_text": "M-CAP_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) M-CAP score (details in DOI: 10.1038/ng.3703). Scores range from 0 to 1. The larger the score the more likely the SNP has damaging effect.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "MIN_DP": {
+    "filters": [
+      {
+        "display_text": "MIN_DP",
+        "es_filter_type": "nested_filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "path": "sample",
+        "tooltip": "Minimum DP observed within the GVCF block",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "MLEAC": {
+    "filters": [
+      {
+        "display_text": "MLEAC",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Maximum likelihood expectation (MLE) for the allele counts (not necessarily the same as the AC), for each ALT allele, in the same order as listed",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "MLEAC",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Summary Statistics Information",
+    "tab": "Basic"
+  },
+  "MLEAF": {
+    "filters": [
+      {
+        "display_text": "MLEAF",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Maximum likelihood expectation (MLE) for the allele frequency (not necessarily the same as the AF), for each ALT allele, in the same order as listed",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "MLEAF",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Summary Statistics Information",
+    "tab": "Basic"
+  },
+  "MQ": {
+    "filters": [
+      {
+        "display_text": "MQ",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "RMS Mapping Quality",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "MQ",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Quality Metrix",
+    "tab": "Basic"
+  },
+  "MQRankSum": {
+    "filters": [
+      {
+        "display_text": "MQRankSum",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Z-score From Wilcoxon rank sum test of Alt vs. Ref read mapping qualities",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "MQRankSum",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Quality Metrix",
+    "tab": "Basic"
+  },
+  "MetaLR_pred": {
+    "filters": [
+      {
+        "display_text": "MetaLR_pred",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "(from dbNSFP) Prediction of our MetaLR based ensemble prediction score,'T(olerated)' or 'D(amaging)'. The score cutoff between 'D' and 'T' is 0.5. The rankscore cutoff between 'D' and 'T' is 0.81101.",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "MetaLR_rankscore": {
+    "filters": [
+      {
+        "display_text": "MetaLR_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) MetaLR scores were ranked among all MetaLR scores in dbNSFP. The rankscore is the ratio of the rank of the score over the total number of MetaLR scores in dbNSFP. The scores range from 0 to 1.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "MetaLR_score": {
+    "filters": [
+      {
+        "display_text": "MetaLR_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) Our logistic regression (LR) based ensemble prediction score, which incorporated 10 scores (SIFT, PolyPhen-2 HDIV, PolyPhen-2 HVAR, GERP++, MutationTaster, Mutation Assessor, FATHMM, LRT, SiPhy, PhyloP) and the maximum frequency observed in the 1000 genomes populations. Larger value means the SNV is more likely to be damaging. Scores range from 0 to 1.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "MetaSVM_pred": {
+    "filters": [
+      {
+        "display_text": "MetaSVM_pred",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "(from dbNSFP) Prediction of our SVM based ensemble prediction score,'T(olerated)' or 'D(amaging)'. The score cutoff between 'D' and 'T' is 0. The rankscore cutoff between 'D' and 'T' is 0.82257.",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "MetaSVM_rankscore": {
+    "filters": [
+      {
+        "display_text": "MetaSVM_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) MetaSVM scores were ranked among all MetaSVM scores in dbNSFP. The rankscore is the ratio of the rank of the score over the total number of MetaSVM scores in dbNSFP. The scores range from 0 to 1.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "MetaSVM_score": {
+    "filters": [
+      {
+        "display_text": "MetaSVM_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) Our support vector machine (SVM) based ensemble prediction score, which incorporated 10 scores (SIFT, PolyPhen-2 HDIV, PolyPhen-2 HVAR, GERP++, MutationTaster, Mutation Assessor, FATHMM, LRT, SiPhy, PhyloP) and the maximum frequency observed in the 1000 genomes populations. Larger value means the SNV is more likely to be damaging. Scores range from -2 to 3 in dbNSFP.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "Mother_Genotype": {
+    "filters": [
+      {
+        "display_text": "Mother_Genotype",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "Mother_ID": {
+    "filters": [
+      {
+        "display_text": "Mother_ID",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "Mother_Phenotype": {
+    "filters": [
+      {
+        "display_text": "Mother_Phenotype",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "(1 = Unaffected, 2 = Affected)",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "MutAss_pred_transf": {
+    "filters": [
+      {
+        "display_text": "MutAss_pred_transf",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "MutAss_pred_transf annotation provided by ANNOVAR",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "MutAss_score": {
+    "filters": [
+      {
+        "display_text": "MutAss_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "MutAss_score annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "MutAss_score_transf": {
+    "filters": [
+      {
+        "display_text": "MutAss_score_transf",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "MutAss_score_transf annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "MutationAssessor_pred": {
+    "filters": [
+      {
+        "display_text": "MutationAssessor_pred",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "(from dbNSFP) MutationAssessor's functional impact of a variant - predicted functional, i.e. high ('H') or medium ('M'), or predicted non-functional, i.e. low ('L') or neutral ('N'). The MAori score cutoffs between 'H' and 'M', 'M' and 'L', and 'L' and 'N', are 3.5, 1.935 and 0.8, respectively. The rankscore cutoffs between 'H' and 'M', 'M' and 'L', and 'L' and 'N', are 0.9307, 0.52043 and 0.19675, respectively.",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "MutationAssessor_score": {
+    "filters": [
+      {
+        "display_text": "MutationAssessor_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) MutationAssessor functional impact combined score (MAori). The score ranges from -5.17 to 6.49 in dbNSFP. Multiple entries are separated by ';', corresponding to Uniprot_entry.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "MutationAssessor_score_rankscore": {
+    "filters": [
+      {
+        "display_text": "MutationAssessor_score_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Entropy of multiple sequence alignment. Higher values are more deleterious.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "MutationTaster_converted_rankscore": {
+    "filters": [
+      {
+        "display_text": "MutationTaster_converted_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) The MTori scores were first converted. If the prediction is 'A' or 'D' MTnew=MTori; if the prediction is 'N' or 'P', MTnew=1-MTori. Then MTnew scores were ranked among all MTnew scores in dbNSFP. If there are multiple scores of a SNV, only the largest MTnew was used in ranking. The rankscore is the ratio of the rank of the score over the total number of MTnew scores in dbNSFP. The scores range from 0.08979 to 0.81001.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "MutationTaster_pred": {
+    "filters": [
+      {
+        "display_text": "MutationTaster_pred",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "(from dbNSFP) MutationTaster prediction, 'A' ('disease_causing_automatic'), 'D' ('disease_causing'), 'N' ('polymorphism') or 'P' ('polymorphism_automatic'). The score cutoff between 'D' and 'N' is 0.5 for MTnew and 0.31733 for the rankscore.",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "MutationTaster_score": {
+    "filters": [
+      {
+        "display_text": "MutationTaster_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) MutationTaster p-value (MTori), ranges from 0 to 1. Multiple scores are separated by ';'. Information on corresponding transcript(s) can be found by querying http://www.mutationtaster.org/ChrPos.html",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "PGT": {
+    "filters": [
+      {
+        "display_text": "PGT",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "PID": {
+    "filters": [
+      {
+        "display_text": "PID",
+        "es_filter_type": "nested_filter_term",
+        "form_type": "CharField",
+        "path": "sample",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "PL": {
+    "filters": [
+      {
+        "display_text": "PL",
+        "es_filter_type": "nested_filter_term",
+        "form_type": "CharField",
+        "path": "sample",
+        "tooltip": "Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "PM1": {
+    "filters": [
+      {
+        "display_text": "PM1",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Located in a mutational hot spot and/or critical and well-established functional domain (e.g., active site of an enzyme) without benign variation",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "PM2": {
+    "filters": [
+      {
+        "display_text": "PM2",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Absent from controls (or at extremely low frequency if recessive) in Exome Sequencing Project, 1000 Genomes Project, or Exome Aggregation Consortium",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "PM3": {
+    "filters": [
+      {
+        "display_text": "PM3",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "For recessive disorders, detected in trans with a pathogenic variant",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "PM4": {
+    "filters": [
+      {
+        "display_text": "PM4",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Protein length changes as a result of in-frame deletions/insertions in a nonrepeat region or stop-loss variants",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "PM5": {
+    "filters": [
+      {
+        "display_text": "PM5",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Novel missense change at an amino acid residue where a different missense change determined to be pathogenic has been seen before",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "PM6": {
+    "filters": [
+      {
+        "display_text": "PM6",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Assumed de novo, but without confirmation of paternity and maternity",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "POS": {
+    "filters": [
+      {
+        "display_text": "POS",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "POS",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Related Information",
+    "tab": "Basic"
+  },
+  "PP1": {
+    "filters": [
+      {
+        "display_text": "PP1",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Cosegregation with disease in multiple affected family members in a gene definitively known to cause the disease",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "PP2": {
+    "filters": [
+      {
+        "display_text": "PP2",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Missense variant in a gene that has a low rate of benign missense variation and in which missense variants are a common mechanism of disease",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "PP3": {
+    "filters": [
+      {
+        "display_text": "PP3",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Multiple lines of computational evidence support a deleterious effect on the gene or gene product (conservation, evolutionary, splicing impact, etc.)",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "PP4": {
+    "filters": [
+      {
+        "display_text": "PP4",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Patient's phenotype or family history is highly specific for a disease with a single genetic etiology",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "PP5": {
+    "filters": [
+      {
+        "display_text": "PP5",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Reputable source recently reports variant as pathogenic, but the evidence is not available to the laboratory to perform an independent evaluation",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "PROVEAN_converted_rankscore": {
+    "filters": [
+      {
+        "display_text": "PROVEAN_converted_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) PROVEANori were first converted to PROVEANnew=1-(PROVEANori+14)/28, then ranked among all PROVEANnew scores in dbNSFP. The rankscore is the ratio of the rank the PROVEANnew score over the total number of PROVEANnew scores in dbNSFP. If there are multiple scores, only the most damaging (largest) rankscore is presented. The scores range from 0 to 1.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "PROVEAN_pred": {
+    "filters": [
+      {
+        "display_text": "PROVEAN_pred",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "(from dbNSFP) If PROVEANori <= -2.5 (rankscore>=0.54382) the corresponding nsSNV is predicted as 'D(amaging)'; otherwise it is predicted as 'N(eutral)'. Multiple predictions separated by ';', corresponding to Ensembl_proteinid.",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "PROVEAN_prediction": {
+    "filters": [
+      {
+        "display_text": "PROVEAN_prediction",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "PROVEAN_prediction annotation provided by ANNOVAR",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "PROVEAN_score": {
+    "filters": [
+      {
+        "display_text": "PROVEAN_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) PROVEAN score (PROVEANori). Scores range from -14 to 14. The smaller the score the more likely the SNP has damaging effect. Multiple scores separated by ';', corresponding to Ensembl_proteinid.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "PS1": {
+    "filters": [
+      {
+        "display_text": "PS1",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Same amino acid change as a previously established pathogenic variant regardless of nucleotide change",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "PS2": {
+    "filters": [
+      {
+        "display_text": "PS2",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "De novo (both maternity and paternity confirmed) in a patient with the disease and no family history",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "PS3": {
+    "filters": [
+      {
+        "display_text": "PS3",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "Well-established in vitro or in vivo functional studies supportive of a damaging effect on the gene or gene product",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "PS4": {
+    "filters": [
+      {
+        "display_text": "PS4",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "The prevalence of the variant in affected individuals is significantly increased compared with the prevalence in controls",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "PVS1": {
+    "filters": [
+      {
+        "display_text": "PVS1",
+        "es_filter_type": "filter_terms",
+        "form_type": "ChoiceField",
+        "tooltip": "null variant (nonsense, frameshift, canonical +- 2 splice sites, initiation codon, single or multiexon deletion) in a gene where LOF is a known mechanism of disease",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "sub_panel": "ACMG/AMP InterVar Criteria",
+    "tab": "Basic"
+  },
+  "PhastCons_100V": {
+    "filters": [
+      {
+        "display_text": "PhastCons_100V",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "A phylogenetic hidden Markov model (phylo-HMM) that uses 100 species. Higher scores are more deleterious.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "PhastCons_46V": {
+    "filters": [
+      {
+        "display_text": "PhastCons_46V",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "A phylogenetic hidden Markov model (phylo-HMM) that uses 46 species. Higher scores are more deleterious.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "Phenotype": {
+    "filters": [
+      {
+        "display_text": "Phenotype",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "(1 = Unaffected, 2 = Affected)",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "PhyloP_100V": {
+    "filters": [
+      {
+        "display_text": "PhyloP_100V",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "PhyloP_100V annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "PhyloP_46V": {
+    "filters": [
+      {
+        "display_text": "PhyloP_46V",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "PhyloP_46V annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "PolyPhen2_pred_transf": {
+    "filters": [
+      {
+        "display_text": "PolyPhen2_pred_transf",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "PolyPhen2_pred_transf annotation provided by ANNOVAR",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "PolyPhen2_score_transf": {
+    "filters": [
+      {
+        "display_text": "PolyPhen2_score_transf",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "PolyPhen2_score_transf annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "Polyphen2_HDIV_pred": {
+    "filters": [
+      {
+        "display_text": "Polyphen2_HDIV_pred",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "(from dbNSFP) Polyphen2 prediction based on HumDiv, 'D' ('probably damaging', HDIV score in [0.957,1] or rankscore in [0.55859,0.91137]), 'P' ('possibly damaging', HDIV score in [0.454,0.956] or rankscore in [0.37043,0.55681]) and 'B' ('benign', HDIV score in [0,0.452] or rankscore in [0.03061,0.36974]). Score cutoff for binary classification is 0.5 for HDIV score or 0.38028 for rankscore, i.e. the prediction is 'neutral' if the HDIV score is smaller than 0.5 (rankscore is smaller than 0.38028), and 'deleterious' if the HDIV score is larger than 0.5 (rankscore is larger than 0.38028). Multiple entries are separated by ';', corresponding to Uniprot_acc.",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "Polyphen2_HDIV_rankscore": {
+    "filters": [
+      {
+        "display_text": "Polyphen2_HDIV_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) Polyphen2 HDIV scores were first ranked among all HDIV scores in dbNSFP. The rankscore is the ratio of the rank the score over the total number of the scores in dbNSFP. If there are multiple scores, only the most damaging (largest) rankscore is presented. The scores range from 0.03061 to 0.91137.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "Polyphen2_HDIV_score": {
+    "filters": [
+      {
+        "display_text": "Polyphen2_HDIV_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) Polyphen2 score based on HumDiv, i.e. hdiv_prob. The score ranges from 0 to 1. Multiple entries separated by ';', corresponding to Uniprot_acc.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "Polyphen2_HVAR_pred": {
+    "filters": [
+      {
+        "display_text": "Polyphen2_HVAR_pred",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "(from dbNSFP) Polyphen2 prediction based on HumVar, 'D' ('probably damaging', HVAR score in [0.909,1] or rankscore in [0.65694,0.97581]), 'P' ('possibly damaging', HVAR in [0.447,0.908] or rankscore in [0.47121,0.65622]) and 'B' ('benign', HVAR score in [0,0.446] or rankscore in [0.01493,0.47076]). Score cutoff for binary classification is 0.5 for HVAR score or 0.48762 for rankscore, i.e. the prediction is 'neutral' if the HVAR score is smaller than 0.5 (rankscore is smaller than 0.48762), and 'deleterious' if the HVAR score is larger than 0.5 (rankscore is larger than 0.48762). Multiple entries are separated by ';', corresponding to Uniprot_acc.",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "Polyphen2_HVAR_rankscore": {
+    "filters": [
+      {
+        "display_text": "Polyphen2_HVAR_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) Polyphen2 HVAR scores were first ranked among all HVAR scores in dbNSFP. The rankscore is the ratio of the rank the score over the total number of the scores in dbNSFP. If there are multiple scores, only the most damaging (largest) rankscore is presented. The scores range from 0.01493 to 0.97581.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "Polyphen2_HVAR_score": {
+    "filters": [
+      {
+        "display_text": "Polyphen2_HVAR_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) Polyphen2 score based on HumVar, i.e. hvar_prob. The score ranges from 0 to 1. Multiple entries separated by ';', corresponding to Uniprot_acc.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "QD": {
+    "filters": [
+      {
+        "display_text": "QD",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Variant Confidence/Quality by Depth",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "QD",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Quality Metrix",
+    "tab": "Basic"
+  },
+  "QUAL": {
+    "filters": [
+      {
+        "display_text": "QUAL",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Variant Genotype Quality Score",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "QUAL",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Quality Metrix",
+    "tab": "Basic"
+  },
+  "RAW_MQ": {
+    "filters": [
+      {
+        "display_text": "RAW_MQ",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Raw data for RMS Mapping Quality",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "RAW_MQ",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Quality Metrix",
+    "tab": "Basic"
+  },
+  "REF": {
+    "filters": [
+      {
+        "display_text": "REF",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Related Information",
+    "tab": "Basic"
+  },
+  "REVEL": {
+    "filters": [
+      {
+        "display_text": "REVEL",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "REVEL (rare exome variant ensemble learner): An Ensemble Method for Predicting the Pathogenicity of Rare Missense Variants.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "RGQ": {
+    "filters": [
+      {
+        "display_text": "RGQ",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "Unconditional reference genotype confidence, encoded as a phred quality -10*log10 p(genotype call is wrong)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Other",
+    "tab": "Basic"
+  },
+  "ReadPosRankSum": {
+    "filters": [
+      {
+        "display_text": "ReadPosRankSum",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Z-score from Wilcoxon rank sum test of Alt vs. Ref read position bias",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "ReadPosRankSum",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Quality Metrix",
+    "tab": "Basic"
+  },
+  "RefSeq": {
+    "filters": [
+      {
+        "display_text": "RefSeq ID",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "CharField",
+        "in_line_tooltip": "(e.g. NM_133378, one ID per line)",
+        "path": "AAChange_refGene",
+        "tooltip": "",
+        "widget_type": "UploadField"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "NCBI Identifier, Variants in Coding Region",
+    "tab": "Basic"
+  },
+  "SB": {
+    "filters": [
+      {
+        "display_text": "SB",
+        "es_filter_type": "nested_filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "path": "sample",
+        "tooltip": "Per-sample component statistics which comprise the Fisher's Exact Test to detect strand bias.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "SIFT_converted_rankscore": {
+    "filters": [
+      {
+        "display_text": "SIFT_converted_rankscore",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "tooltip": "(from dbNSFP) SIFTori scores were first converted to SIFTnew=1-SIFTori, then ranked among all SIFTnew scores in dbNSFP. The rankscore is the ratio of the rank the SIFTnew score over the total number of SIFTnew scores in dbNSFP. If there are multiple scores, only the most damaging (largest) rankscore is presented. The rankscores range from 0.00964 to 0.91255.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "SIFT_pred": {
+    "filters": [
+      {
+        "display_text": "SIFT_pred",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "(from dbNSFP) If SIFTori is smaller than 0.05 (rankscore>0.39575) the corresponding nsSNV is predicted as 'D(amaging)'; otherwise it is predicted as 'T(olerated)'. Multiple predictions separated by ';'",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "SIFT_pred_transf": {
+    "filters": [
+      {
+        "display_text": "SIFT_pred_transf",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "SIFT_pred_transf annotation provided by ANNOVAR",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "SIFT_score": {
+    "filters": [
+      {
+        "display_text": "SIFT_score",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "tooltip": "(from dbNSFP) SIFT score (SIFTori). Scores range from 0 to 1. The smaller the score the more likely the SNP has damaging effect. Multiple scores separated by ';', corresponding to Ensembl_proteinid.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "SIFT_score_transf": {
+    "filters": [
+      {
+        "display_text": "SIFT_score_transf",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "tooltip": "SIFT_score_transf annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "SOR": {
+    "filters": [
+      {
+        "display_text": "SOR",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Symmetric Odds Ratio of 2x2 contingency table to detect strand bias",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "SOR",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Quality Metrix",
+    "tab": "Basic"
+  },
+  "Sample_ID": {
+    "filters": [
+      {
+        "display_text": "Sample_ID",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "Sex": {
+    "filters": [
+      {
+        "display_text": "Sex",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "(1 = Male, 2 = Female)",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "SiPhy_29way_logOdds": {
+    "filters": [
+      {
+        "display_text": "SiPhy_29way_logOdds",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) SiPhy score based on 29 mammals genomes. The larger the score, the more conserved the site. Scores range from 0 to 37.9718 in dbNSFP.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "SiPhy_29way_logOdds_rankscore": {
+    "filters": [
+      {
+        "display_text": "SiPhy_29way_logOdds_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) SiPhy_29way_logOdds scores were ranked among all SiPhy_29way_logOdds scores in dbNSFP. The rankscore is the ratio of the rank of the score over the total number of SiPhy_29way_logOdds scores in dbNSFP.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "Unaffected_Siblings_Ages": {
+    "filters": [
+      {
+        "display_text": "Unaffected_Siblings_Ages",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "Unaffected_Siblings_Genotypes": {
+    "filters": [
+      {
+        "display_text": "Unaffected_Siblings_Genotypes",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "Unaffected_Siblings_IDs": {
+    "filters": [
+      {
+        "display_text": "Unaffected_Siblings_IDs",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "Unaffected_Siblings_Sex": {
+    "filters": [
+      {
+        "display_text": "Unaffected_Siblings_Sex",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "in_line_tooltip": "(1 = Male, 2 = Female)",
+        "path": "sample",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Sample Related Information",
+    "tab": "Basic"
+  },
+  "Uniprot_ID": {
+    "filters": [
+      {
+        "display_text": "Uniprot_ID",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "Uniprot_ID annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "Other",
+    "tab": "Basic"
+  },
+  "Uniprot_Name": {
+    "filters": [
+      {
+        "display_text": "Uniprot_Name",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "Uniprot_Name annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "Other",
+    "tab": "Basic"
+  },
+  "Upstream_ensGene": {
+    "filters": [
+      {
+        "display_text": "Upstream_ensGene",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "Ensembl Identifier, Variants in Non-Coding Region",
+    "tab": "Basic"
+  },
+  "Upstream_refGene": {
+    "filters": [
+      {
+        "display_text": "Upstream_refGene",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "NCBI Identifier, Variants in Non-Coding Region",
+    "tab": "Basic"
+  },
+  "VEST3_rankscore": {
+    "filters": [
+      {
+        "display_text": "VEST3_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Variant effect scoring tool using Random forest classifier. Higher values are more deleterious.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "VEST3_score": {
+    "filters": [
+      {
+        "display_text": "VEST3_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Variant effect scoring tool using Random forest classifier. Higher values are more deleterious.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "VQSLOD": {
+    "filters": [
+      {
+        "display_text": "VQSLOD",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Log odds of being a true variant versus being false under the trained gaussian mixture model",
+        "widget_type": "TextInput"
+      },
+      {
+        "display_text": "VQSLOD",
+        "es_filter_type": "filter_range_lte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<=)",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Quality Metrix",
+    "tab": "Basic"
+  },
+  "Variant": {
+    "filters": [
+      {
+        "display_text": "Variant",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "in_line_tooltip": "(e.g. 1_115252204_C_T)",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Variant Related Information",
+    "tab": "Basic"
+  },
+  "VariantType": {
+    "filters": [
+      {
+        "display_text": "VariantType",
+        "es_filter_type": "filter_term",
+        "form_type": "ChoiceField",
+        "tooltip": "",
+        "values": "get_values_from_es()",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Variant Related Information",
+    "tab": "Basic"
+  },
+  "aa_change_eg": {
+    "filters": [
+      {
+        "display_text": "Amino Acid Change",
+        "es_filter_type": "nested_filter_term",
+        "form_type": "CharField",
+        "in_line_tooltip": "(e.g. p.T243A)",
+        "path": "AAChange_ensGene",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "Ensembl Identifier, Variants in Coding Region",
+    "tab": "Basic"
+  },
+  "aa_change_rg": {
+    "filters": [
+      {
+        "display_text": "Amino Acid Change",
+        "es_filter_type": "nested_filter_term",
+        "form_type": "CharField",
+        "in_line_tooltip": "(e.g. p.T243A)",
+        "path": "AAChange_refGene",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "NCBI Identifier, Variants in Coding Region",
+    "tab": "Basic"
+  },
+  "cdna_change_eg": {
+    "filters": [
+      {
+        "display_text": "cDNA Change",
+        "es_filter_type": "nested_filter_term",
+        "form_type": "CharField",
+        "in_line_tooltip": "(e.g. c.A727G)",
+        "path": "AAChange_ensGene",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "Ensembl Identifier, Variants in Coding Region",
+    "tab": "Basic"
+  },
+  "cdna_change_rg": {
+    "filters": [
+      {
+        "display_text": "cDNA Change",
+        "es_filter_type": "nested_filter_term",
+        "form_type": "CharField",
+        "in_line_tooltip": "(e.g. c.A727G)",
+        "path": "AAChange_refGene",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "NCBI Identifier, Variants in Coding Region",
+    "tab": "Basic"
+  },
+  "cytoBand": {
+    "filters": [
+      {
+        "display_text": "cytoBand",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "cytoBand annotation provided by ANNOVAR",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Variant Related Information",
+    "tab": "Basic"
+  },
+  "dbSNP_ID": {
+    "filters": [
+      {
+        "display_text": "dbSNP_ID",
+        "es_filter_type": "filter_terms",
+        "form_type": "CharField",
+        "in_line_tooltip": "(One ID per line)",
+        "tooltip": "dbSNP_ID annotation provided by ANNOVAR",
+        "widget_type": "UploadField"
+      },
+      {
+        "display_text": "Limit Variants to dbSNP_ID",
+        "es_filter_type": "filter_exists",
+        "form_type": "ChoiceField",
+        "tooltip": "dbSNP_ID annotation provided by ANNOVAR",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Variant Related Information",
+    "tab": "Basic"
+  },
+  "dbscSNV_ADA_SCORE": {
+    "filters": [
+      {
+        "display_text": "dbscSNV_ADA_SCORE",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Splice site prediction by AdaBoost",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Splice_junctions",
+    "tab": "Basic"
+  },
+  "dbscSNV_RF_SCORE": {
+    "filters": [
+      {
+        "display_text": "dbscSNV_RF_SCORE",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Splice site prediction by Random Forest",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Splice_junctions",
+    "tab": "Basic"
+  },
+  "esp6500siv2_aa": {
+    "filters": [
+      {
+        "display_text": "esp6500siv2_aa",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "African American",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "Exome Sequencing Project",
+    "tab": "Basic"
+  },
+  "esp6500siv2_all": {
+    "filters": [
+      {
+        "display_text": "esp6500siv2_all",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "All available population",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "Exome Sequencing Project",
+    "tab": "Basic"
+  },
+  "esp6500siv2_ea": {
+    "filters": [
+      {
+        "display_text": "esp6500siv2_ea",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "European American",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "Exome Sequencing Project",
+    "tab": "Basic"
+  },
+  "exon_id_eg": {
+    "filters": [
+      {
+        "display_text": "Exon ID",
+        "es_filter_type": "nested_filter_term",
+        "form_type": "CharField",
+        "in_line_tooltip": "(e.g. 2/25)",
+        "path": "AAChange_ensGene",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "Ensembl Identifier, Variants in Coding Region",
+    "tab": "Basic"
+  },
+  "exon_id_rg": {
+    "filters": [
+      {
+        "display_text": "Exon ID",
+        "es_filter_type": "nested_filter_term",
+        "form_type": "CharField",
+        "in_line_tooltip": "(e.g. 2/25)",
+        "path": "AAChange_refGene",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Gene Related Information",
+    "sub_panel": "NCBI Identifier, Variants in Coding Region",
+    "tab": "Basic"
+  },
+  "fathmm-MKL_coding_pred": {
+    "filters": [
+      {
+        "display_text": "fathmm-MKL_coding_pred",
+        "es_filter_type": "filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "(from dbNSFP) If a fathmm-MKL_coding_score is >0.5 (or rankscore >0.28317) the corresponding nsSNV is predicted as 'D(AMAGING)'; otherwise it is predicted as 'N(EUTRAL)'.",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Pathogenicity Predictions",
+    "sub_panel": "Predictions",
+    "tab": "Basic"
+  },
+  "fathmm-MKL_coding_rankscore": {
+    "filters": [
+      {
+        "display_text": "fathmm-MKL_coding_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) fathmm-MKL coding scores were ranked among all fathmm-MKL coding scores in dbNSFP. The rankscore is the ratio of the rank of the score over the total number of fathmm-MKL coding scores in dbNSFP.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "fathmm-MKL_coding_score": {
+    "filters": [
+      {
+        "display_text": "fathmm-MKL_coding_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) fathmm-MKL p-values. Scores range from 0 to 1. SNVs with scores >0.5 are predicted to be deleterious, and those <0.5 are predicted to be neutral or benign. Scores close to 0 or 1 are with the highest-confidence. Coding scores are trained using 10 groups of features. More details of the score can be found in doi: 10.1093/bioinformatics/btv009.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Exome_region",
+    "tab": "Basic"
+  },
+  "gerp++gt2": {
+    "filters": [
+      {
+        "display_text": "gerp++gt2",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "gerp++gt2 annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "gnomAD_genome_AFR": {
+    "filters": [
+      {
+        "display_text": "gnomAD_genome_AFR",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "gnomAD_genome_AFR annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "gnomAD Allele Frequency",
+    "tab": "Basic"
+  },
+  "gnomAD_genome_ALL": {
+    "filters": [
+      {
+        "display_text": "gnomAD_genome_ALL",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "gnomAD_genome_ALL annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "gnomAD Allele Frequency",
+    "tab": "Basic"
+  },
+  "gnomAD_genome_AMR": {
+    "filters": [
+      {
+        "display_text": "gnomAD_genome_AMR",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "gnomAD_genome_AMR annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "gnomAD Allele Frequency",
+    "tab": "Basic"
+  },
+  "gnomAD_genome_ASJ": {
+    "filters": [
+      {
+        "display_text": "gnomAD_genome_ASJ",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "gnomAD_genome_ASJ annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "gnomAD Allele Frequency",
+    "tab": "Basic"
+  },
+  "gnomAD_genome_EAS": {
+    "filters": [
+      {
+        "display_text": "gnomAD_genome_EAS",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "gnomAD_genome_EAS annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "gnomAD Allele Frequency",
+    "tab": "Basic"
+  },
+  "gnomAD_genome_FIN": {
+    "filters": [
+      {
+        "display_text": "gnomAD_genome_FIN",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "gnomAD_genome_FIN annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "gnomAD Allele Frequency",
+    "tab": "Basic"
+  },
+  "gnomAD_genome_NFE": {
+    "filters": [
+      {
+        "display_text": "gnomAD_genome_NFE",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "gnomAD_genome_NFE annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "gnomAD Allele Frequency",
+    "tab": "Basic"
+  },
+  "gnomAD_genome_OTH": {
+    "filters": [
+      {
+        "display_text": "gnomAD_genome_OTH",
+        "es_filter_type": "filter_range_lt",
+        "form_type": "CharField",
+        "in_line_tooltip": "(<)",
+        "tooltip": "gnomAD_genome_OTH annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Minor Allele Frequency (MAF)",
+    "sub_panel": "gnomAD Allele Frequency",
+    "tab": "Basic"
+  },
+  "gwasCatalog": {
+    "filters": [
+      {
+        "display_text": "gwasCatalog",
+        "es_filter_type": "nested_filter_terms",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "The NHGRI-EBI Catalog of published genome-wide association studies",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Disease Associations",
+    "tab": "Basic"
+  },
+  "integrated_fitCons_score": {
+    "filters": [
+      {
+        "display_text": "integrated_fitCons_score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) fitCons score predicts the fraction of genomic positions belonging to a specific function class (defined by epigenomic 'fingerprint') that are under selective pressure. Scores range from 0 to 1, with a larger score indicating a higher proportion of nucleic sites of the functional class the genomic position belong to are under selective pressure, therefore more likely to be functional important. Integrated (i6) scores are integrated across three cell types (GM12878, H1-hESC and HUVEC). More details can be found in doi:10.1038/ng.3196.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "integrated_fitCons_score_rankscore": {
+    "filters": [
+      {
+        "display_text": "integrated_fitCons_score_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Fitness consequences of functional annotation. Integrate functional assays like ChIP-Seq with conservation measure of transcription factor binding sites. Higher scores are more deleterious.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Pathogenicity Scores",
+    "sub_panel": "Whole_genome",
+    "tab": "Basic"
+  },
+  "mendelian_diseases": {
+    "filters": [
+      {
+        "display_text": "mendelian_diseases",
+        "es_filter_type": "filter_term",
+        "form_type": "CharField",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Other",
+    "tab": "Basic"
+  },
+  "phastCons100way_vertebrate": {
+    "filters": [
+      {
+        "display_text": "phastCons100way_vertebrate",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) phastCons conservation score based on the multiple alignments of 100 vertebrate genomes (including human). The larger the score, the more conserved the site. Scores range from 0 to 1.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "phastCons100way_vertebrate_rankscore": {
+    "filters": [
+      {
+        "display_text": "phastCons100way_vertebrate_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) phastCons100way_vertebrate scores were ranked among all phastCons100way_vertebrate scores in dbNSFP. The rankscore is the ratio of the rank of the score over the total number of phastCons100way_vertebrate scores in dbNSFP.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "phastCons20way_mammalian": {
+    "filters": [
+      {
+        "display_text": "phastCons20way_mammalian",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Phylogentic p-values. A phylogenetic hidden Markov model (phylo-HMM) that uses 20 species. Higher scores are more deleterious.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "phastCons20way_mammalian_rankscore": {
+    "filters": [
+      {
+        "display_text": "phastCons20way_mammalian_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Phylogentic p-values. A phylogenetic hidden Markov model (phylo-HMM) that uses 20 species. Higher scores are more deleterious.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "phyloP100way_vertebrate": {
+    "filters": [
+      {
+        "display_text": "phyloP100way_vertebrate",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) phyloP (phylogenetic p-values) conservation score based on the multiple alignments of 100 vertebrate genomes (including human). The larger the score, the more conserved the site. Scores range from -20.0 to 10.003 in dbNSFP.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "phyloP100way_vertebrate_rankscore": {
+    "filters": [
+      {
+        "display_text": "phyloP100way_vertebrate_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "(from dbNSFP) phyloP100way_vertebrate scores were ranked among all phyloP100way_vertebrate scores in dbNSFP. The rankscore is the ratio of the rank of the score over the total number of phyloP100way_vertebrate scores in dbNSFP.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "phyloP20way_mammalian": {
+    "filters": [
+      {
+        "display_text": "phyloP20way_mammalian",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Phylogentic p-values. A phylogenetic hidden Markov model (phylo-HMM) Use 20 species. Higher scores are more deleterious.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "phyloP20way_mammalian_rankscore": {
+    "filters": [
+      {
+        "display_text": "phyloP20way_mammalian_rankscore",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "Phylogentic p-values. A phylogenetic hidden Markov model (phylo-HMM) Use 20 species. Higher scores are more deleterious.",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "snp138NonFlagged": {
+    "filters": [
+      {
+        "display_text": "snp138NonFlagged",
+        "es_filter_type": "filter_terms",
+        "form_type": "CharField",
+        "in_line_tooltip": "(One ID per line)",
+        "tooltip": "SNPs not found to be associated with disease",
+        "widget_type": "UploadField"
+      },
+      {
+        "display_text": "Limit Variants to snp138NonFlagged",
+        "es_filter_type": "filter_exists",
+        "form_type": "ChoiceField",
+        "tooltip": "SNPs not found to be associated with disease",
+        "widget_type": "Select"
+      }
+    ],
+    "panel": "Disease Associations",
+    "tab": "Basic"
+  },
+  "targetScanS_Name": {
+    "filters": [
+      {
+        "display_text": "targetScanS_Name",
+        "es_filter_type": "filter_term",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "Predicted microRNA and its binding sites",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Sites",
+    "tab": "Basic"
+  },
+  "targetScanS_Score": {
+    "filters": [
+      {
+        "display_text": "targetScanS_Score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "tfbsConsSites_Name": {
+    "filters": [
+      {
+        "display_text": "tfbsConsSites_Name",
+        "es_filter_type": "filter_term",
+        "form_type": "MultipleChoiceField",
+        "tooltip": "Transcription-Factor Binding Sites",
+        "values": "get_values_from_es()",
+        "widget_type": "SelectMultiple"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Sites",
+    "tab": "Basic"
+  },
+  "tfbsConsSites_Score": {
+    "filters": [
+      {
+        "display_text": "tfbsConsSites_Score",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  },
+  "wgRna": {
+    "filters": [
+      {
+        "display_text": "wgRna",
+        "es_filter_type": "filter_range_gte",
+        "form_type": "CharField",
+        "in_line_tooltip": "(>=)",
+        "tooltip": "wgRna annotation provided by ANNOVAR",
+        "widget_type": "TextInput"
+      }
+    ],
+    "panel": "Conservation",
+    "sub_panel": "Scores",
+    "tab": "Basic"
+  }
+}

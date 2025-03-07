@@ -1,0 +1,1614 @@
+{
+    "chr2len": {
+        "1": 249250621,
+        "10": 135534747,
+        "11": 135006516,
+        "12": 133851895,
+        "13": 115169878,
+        "14": 107349540,
+        "15": 102531392,
+        "16": 90354753,
+        "17": 81195210,
+        "18": 78077248,
+        "19": 59128983,
+        "2": 243199373,
+        "20": 63025520,
+        "21": 48129895,
+        "22": 51304566,
+        "3": 198022430,
+        "4": 191154276,
+        "5": 180915260,
+        "6": 171115067,
+        "7": 159138663,
+        "8": 146364022,
+        "9": 141213431,
+        "X": 155270560,
+        "Y": 59373566
+    },
+    "col_header": [
+        "CHROM",
+        "POS",
+        "ID",
+        "REF",
+        "ALT",
+        "QUAL",
+        "FILTER",
+        "INFO",
+        "FORMAT",
+        "XG102",
+        "XG103",
+        "XG104",
+        "XG202",
+        "XG203",
+        "XG204",
+        "XG302",
+        "XG303",
+        "XG304",
+        "XG402",
+        "XG403",
+        "XG404"
+    ],
+    "contig_dict": {
+        "1": {
+            "assembly": "b37",
+            "length": "249250621"
+        },
+        "10": {
+            "assembly": "b37",
+            "length": "135534747"
+        },
+        "11": {
+            "assembly": "b37",
+            "length": "135006516"
+        },
+        "12": {
+            "assembly": "b37",
+            "length": "133851895"
+        },
+        "13": {
+            "assembly": "b37",
+            "length": "115169878"
+        },
+        "14": {
+            "assembly": "b37",
+            "length": "107349540"
+        },
+        "15": {
+            "assembly": "b37",
+            "length": "102531392"
+        },
+        "16": {
+            "assembly": "b37",
+            "length": "90354753"
+        },
+        "17": {
+            "assembly": "b37",
+            "length": "81195210"
+        },
+        "18": {
+            "assembly": "b37",
+            "length": "78077248"
+        },
+        "19": {
+            "assembly": "b37",
+            "length": "59128983"
+        },
+        "2": {
+            "assembly": "b37",
+            "length": "243199373"
+        },
+        "20": {
+            "assembly": "b37",
+            "length": "63025520"
+        },
+        "21": {
+            "assembly": "b37",
+            "length": "48129895"
+        },
+        "22": {
+            "assembly": "b37",
+            "length": "51304566"
+        },
+        "3": {
+            "assembly": "b37",
+            "length": "198022430"
+        },
+        "4": {
+            "assembly": "b37",
+            "length": "191154276"
+        },
+        "5": {
+            "assembly": "b37",
+            "length": "180915260"
+        },
+        "6": {
+            "assembly": "b37",
+            "length": "171115067"
+        },
+        "7": {
+            "assembly": "b37",
+            "length": "159138663"
+        },
+        "8": {
+            "assembly": "b37",
+            "length": "146364022"
+        },
+        "9": {
+            "assembly": "b37",
+            "length": "141213431"
+        },
+        "GL000191.1": {
+            "assembly": "b37",
+            "length": "106433"
+        },
+        "GL000192.1": {
+            "assembly": "b37",
+            "length": "547496"
+        },
+        "GL000193.1": {
+            "assembly": "b37",
+            "length": "189789"
+        },
+        "GL000194.1": {
+            "assembly": "b37",
+            "length": "191469"
+        },
+        "GL000195.1": {
+            "assembly": "b37",
+            "length": "182896"
+        },
+        "GL000196.1": {
+            "assembly": "b37",
+            "length": "38914"
+        },
+        "GL000197.1": {
+            "assembly": "b37",
+            "length": "37175"
+        },
+        "GL000198.1": {
+            "assembly": "b37",
+            "length": "90085"
+        },
+        "GL000199.1": {
+            "assembly": "b37",
+            "length": "169874"
+        },
+        "GL000200.1": {
+            "assembly": "b37",
+            "length": "187035"
+        },
+        "GL000201.1": {
+            "assembly": "b37",
+            "length": "36148"
+        },
+        "GL000202.1": {
+            "assembly": "b37",
+            "length": "40103"
+        },
+        "GL000203.1": {
+            "assembly": "b37",
+            "length": "37498"
+        },
+        "GL000204.1": {
+            "assembly": "b37",
+            "length": "81310"
+        },
+        "GL000205.1": {
+            "assembly": "b37",
+            "length": "174588"
+        },
+        "GL000206.1": {
+            "assembly": "b37",
+            "length": "41001"
+        },
+        "GL000207.1": {
+            "assembly": "b37",
+            "length": "4262"
+        },
+        "GL000208.1": {
+            "assembly": "b37",
+            "length": "92689"
+        },
+        "GL000209.1": {
+            "assembly": "b37",
+            "length": "159169"
+        },
+        "GL000210.1": {
+            "assembly": "b37",
+            "length": "27682"
+        },
+        "GL000211.1": {
+            "assembly": "b37",
+            "length": "166566"
+        },
+        "GL000212.1": {
+            "assembly": "b37",
+            "length": "186858"
+        },
+        "GL000213.1": {
+            "assembly": "b37",
+            "length": "164239"
+        },
+        "GL000214.1": {
+            "assembly": "b37",
+            "length": "137718"
+        },
+        "GL000215.1": {
+            "assembly": "b37",
+            "length": "172545"
+        },
+        "GL000216.1": {
+            "assembly": "b37",
+            "length": "172294"
+        },
+        "GL000217.1": {
+            "assembly": "b37",
+            "length": "172149"
+        },
+        "GL000218.1": {
+            "assembly": "b37",
+            "length": "161147"
+        },
+        "GL000219.1": {
+            "assembly": "b37",
+            "length": "179198"
+        },
+        "GL000220.1": {
+            "assembly": "b37",
+            "length": "161802"
+        },
+        "GL000221.1": {
+            "assembly": "b37",
+            "length": "155397"
+        },
+        "GL000222.1": {
+            "assembly": "b37",
+            "length": "186861"
+        },
+        "GL000223.1": {
+            "assembly": "b37",
+            "length": "180455"
+        },
+        "GL000224.1": {
+            "assembly": "b37",
+            "length": "179693"
+        },
+        "GL000225.1": {
+            "assembly": "b37",
+            "length": "211173"
+        },
+        "GL000226.1": {
+            "assembly": "b37",
+            "length": "15008"
+        },
+        "GL000227.1": {
+            "assembly": "b37",
+            "length": "128374"
+        },
+        "GL000228.1": {
+            "assembly": "b37",
+            "length": "129120"
+        },
+        "GL000229.1": {
+            "assembly": "b37",
+            "length": "19913"
+        },
+        "GL000230.1": {
+            "assembly": "b37",
+            "length": "43691"
+        },
+        "GL000231.1": {
+            "assembly": "b37",
+            "length": "27386"
+        },
+        "GL000232.1": {
+            "assembly": "b37",
+            "length": "40652"
+        },
+        "GL000233.1": {
+            "assembly": "b37",
+            "length": "45941"
+        },
+        "GL000234.1": {
+            "assembly": "b37",
+            "length": "40531"
+        },
+        "GL000235.1": {
+            "assembly": "b37",
+            "length": "34474"
+        },
+        "GL000236.1": {
+            "assembly": "b37",
+            "length": "41934"
+        },
+        "GL000237.1": {
+            "assembly": "b37",
+            "length": "45867"
+        },
+        "GL000238.1": {
+            "assembly": "b37",
+            "length": "39939"
+        },
+        "GL000239.1": {
+            "assembly": "b37",
+            "length": "33824"
+        },
+        "GL000240.1": {
+            "assembly": "b37",
+            "length": "41933"
+        },
+        "GL000241.1": {
+            "assembly": "b37",
+            "length": "42152"
+        },
+        "GL000242.1": {
+            "assembly": "b37",
+            "length": "43523"
+        },
+        "GL000243.1": {
+            "assembly": "b37",
+            "length": "43341"
+        },
+        "GL000244.1": {
+            "assembly": "b37",
+            "length": "39929"
+        },
+        "GL000245.1": {
+            "assembly": "b37",
+            "length": "36651"
+        },
+        "GL000246.1": {
+            "assembly": "b37",
+            "length": "38154"
+        },
+        "GL000247.1": {
+            "assembly": "b37",
+            "length": "36422"
+        },
+        "GL000248.1": {
+            "assembly": "b37",
+            "length": "39786"
+        },
+        "GL000249.1": {
+            "assembly": "b37",
+            "length": "38502"
+        },
+        "MT": {
+            "assembly": "b37",
+            "length": "16569"
+        },
+        "NC_007605": {
+            "assembly": "b37",
+            "length": "171823"
+        },
+        "X": {
+            "assembly": "b37",
+            "length": "155270560"
+        },
+        "Y": {
+            "assembly": "b37",
+            "length": "59373566"
+        },
+        "hs37d5": {
+            "assembly": "b37",
+            "length": "35477943"
+        }
+    },
+    "format_dict": {
+        "AD": {
+            "Description": "Allelic depths for the ref and alt alleles in the order listed",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "DP": {
+            "Description": "Approximate read depth (reads with MQ=255 or with bad mates are filtered)",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "GQ": {
+            "Description": "Genotype Quality",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "GT": {
+            "Description": "Genotype",
+            "type": "keyword"
+        },
+        "MIN_DP": {
+            "Description": "Minimum DP observed within the GVCF block",
+            "type": "integer"
+        },
+        "PGT": {
+            "Description": "Physical phasing haplotype information, describing how the alternate alleles are phased in relation to one another",
+            "type": "keyword"
+        },
+        "PID": {
+            "Description": "Physical phasing ID information, where each unique ID within a given sample (but not across samples) connects records within a phasing group",
+            "type": "keyword"
+        },
+        "PL": {
+            "Description": "Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "RGQ": {
+            "Description": "Unconditional reference genotype confidence, encoded as a phred quality -10*log10 p(genotype call is wrong)",
+            "type": "integer"
+        },
+        "SB": {
+            "Description": "Per-sample component statistics which comprise the Fisher's Exact Test to detect strand bias.",
+            "type": "integer"
+        }
+    },
+    "info_dict": {
+        "1000g2015aug_afr": {
+            "Description": "1000g2015aug_afr annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "1000g2015aug_all": {
+            "Description": "1000g2015aug_all annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "1000g2015aug_amr": {
+            "Description": "1000g2015aug_amr annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "1000g2015aug_eur": {
+            "Description": "1000g2015aug_eur annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "1000g2015aug_sas": {
+            "Description": "1000g2015aug_sas annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "AAChange_ensGene": {
+            "Description": "AAChange.ensGene annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "AAChange_refGene": {
+            "Description": "AAChange.refGene annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "AA_pos": {
+            "Description": "AA_pos annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "AA_sub": {
+            "Description": "AA_sub annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "AC": {
+            "Description": "Allele count in genotypes, for each ALT allele, in the same order as listed",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "AF": {
+            "Description": "Allele Frequency, for each ALT allele, in the same order as listed",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ALLELE_END": {
+            "Description": "Flag the end of ANNOVAR annotation for one alternative allele",
+            "type": "flag"
+        },
+        "AN": {
+            "Description": "Total number of alleles in called genotypes",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "ANNOVAR_DATE": {
+            "Description": "Flag the start of ANNOVAR annotation for one alternative allele",
+            "type": "keyword"
+        },
+        "Associated_disease": {
+            "Description": "Associated_disease annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "BA1": {
+            "Description": "BA1 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "BP1": {
+            "Description": "BP1 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "BP2": {
+            "Description": "BP2 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "BP3": {
+            "Description": "BP3 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "BP4": {
+            "Description": "BP4 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "BP5": {
+            "Description": "BP5 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "BP6": {
+            "Description": "BP6 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "BP7": {
+            "Description": "BP7 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "BS1": {
+            "Description": "BS1 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "BS2": {
+            "Description": "BS2 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "BS3": {
+            "Description": "BS3 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "BS4": {
+            "Description": "BS4 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "BaseQRankSum": {
+            "Description": "Z-score from Wilcoxon rank sum test of Alt Vs. Ref base qualities",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "CADD13_PHRED": {
+            "Description": "CADD13_PHRED annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "CADD13_RawScore": {
+            "Description": "CADD13_RawScore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "CADD_Phred_score": {
+            "Description": "CADD_Phred_score annotation provided by ANNOVAR",
+            "type": "float"
+        },
+        "CADD_phred": {
+            "Description": "CADD_phred annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "CADD_prediction": {
+            "Description": "CADD_prediction annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "CADD_raw": {
+            "Description": "CADD_raw annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "CADD_raw_rankscore": {
+            "Description": "CADD_raw_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "CADD_score": {
+            "Description": "CADD_score annotation provided by ANNOVAR",
+            "type": "float"
+        },
+        "CLNALLELEID": {
+            "Description": "CLNALLELEID annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "CLNDISDB": {
+            "Description": "CLNDISDB annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "CLNDN": {
+            "Description": "CLNDN annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "CLNREVSTAT": {
+            "Description": "CLNREVSTAT annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "CLNSIG": {
+            "Description": "CLNSIG annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "COSMIC_ID": {
+            "Description": "COSMIC_ID annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "COVEC_WMV": {
+            "Description": "COVEC_WMV annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "COVEC_WMV_prediction": {
+            "Description": "COVEC_WMV_prediction annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Carol_prediction": {
+            "Description": "Carol_prediction annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Carol_score": {
+            "Description": "Carol_score annotation provided by ANNOVAR",
+            "type": "float"
+        },
+        "Class_predicted": {
+            "Description": "Class_predicted annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "ClippingRankSum": {
+            "Description": "Z-score From Wilcoxon rank sum test of Alt vs. Ref number of hard clipped bases",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "Codon_sub": {
+            "Description": "Codon_sub annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Condel_pred": {
+            "Description": "Condel_pred annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Condel_score": {
+            "Description": "Condel_score annotation provided by ANNOVAR",
+            "type": "float"
+        },
+        "DANN_rankscore": {
+            "Description": "DANN_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "DANN_score": {
+            "Description": "DANN_score annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "DB": {
+            "Description": "dbSNP Membership",
+            "type": "flag"
+        },
+        "DP": {
+            "Description": "Approximate read depth; some reads may have been filtered",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "DS": {
+            "Description": "Were any of the samples downsampled?",
+            "type": "flag"
+        },
+        "EFIN_HumDiv_Prediction": {
+            "Description": "EFIN_HumDiv_Prediction annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "EFIN_HumDiv_Score": {
+            "Description": "EFIN_HumDiv_Score annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "EFIN_Swiss_Prot_Prediction": {
+            "Description": "EFIN_Swiss_Prot_Prediction annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "EFIN_Swiss_Prot_Score": {
+            "Description": "EFIN_Swiss_Prot_Score annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "END": {
+            "Description": "Stop position of the interval",
+            "type": "integer"
+        },
+        "Eigen": {
+            "Description": "Eigen annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "Eigen-PC-raw": {
+            "Description": "Eigen-PC-raw annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "Eigen-raw": {
+            "Description": "Eigen-raw annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "Eigen_coding_or_noncoding": {
+            "Description": "Eigen_coding_or_noncoding annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "Ensembl_Gene_ID": {
+            "Description": "Ensembl_Gene_ID annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Ensembl_Protein_ID": {
+            "Description": "Ensembl_Protein_ID annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "ExAC_AFR": {
+            "Description": "ExAC_AFR annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_ALL": {
+            "Description": "ExAC_ALL annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_AMR": {
+            "Description": "ExAC_AMR annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_EAS": {
+            "Description": "ExAC_EAS annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_FIN": {
+            "Description": "ExAC_FIN annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_NFE": {
+            "Description": "ExAC_NFE annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_OTH": {
+            "Description": "ExAC_OTH annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_SAS": {
+            "Description": "ExAC_SAS annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nonpsych_AFR": {
+            "Description": "ExAC_nonpsych_AFR annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nonpsych_ALL": {
+            "Description": "ExAC_nonpsych_ALL annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nonpsych_AMR": {
+            "Description": "ExAC_nonpsych_AMR annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nonpsych_EAS": {
+            "Description": "ExAC_nonpsych_EAS annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nonpsych_FIN": {
+            "Description": "ExAC_nonpsych_FIN annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nonpsych_NFE": {
+            "Description": "ExAC_nonpsych_NFE annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nonpsych_OTH": {
+            "Description": "ExAC_nonpsych_OTH annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nonpsych_SAS": {
+            "Description": "ExAC_nonpsych_SAS annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nontcga_AFR": {
+            "Description": "ExAC_nontcga_AFR annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nontcga_ALL": {
+            "Description": "ExAC_nontcga_ALL annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nontcga_AMR": {
+            "Description": "ExAC_nontcga_AMR annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nontcga_EAS": {
+            "Description": "ExAC_nontcga_EAS annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nontcga_FIN": {
+            "Description": "ExAC_nontcga_FIN annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nontcga_NFE": {
+            "Description": "ExAC_nontcga_NFE annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nontcga_OTH": {
+            "Description": "ExAC_nontcga_OTH annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExAC_nontcga_SAS": {
+            "Description": "ExAC_nontcga_SAS annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "Examined_samples": {
+            "Description": "Examined_samples annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "ExcessHet": {
+            "Description": "Phred-scaled p-value for exact test of excess heterozygosity",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ExonicFunc_ensGene": {
+            "Description": "ExonicFunc.ensGene annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "ExonicFunc_refGene": {
+            "Description": "ExonicFunc.refGene annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "FATHMM_converted_rankscore": {
+            "Description": "FATHMM_converted_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "FATHMM_pred": {
+            "Description": "FATHMM_pred annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "FATHMM_score": {
+            "Description": "FATHMM_score annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "FS": {
+            "Description": "Phred-scaled p-value using Fisher's exact test to detect strand bias",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "FatHmm_prediction": {
+            "Description": "FatHmm_prediction annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "FatHmm_score": {
+            "Description": "FatHmm_score annotation provided by ANNOVAR",
+            "type": "float"
+        },
+        "Func_ensGene": {
+            "Description": "Func.ensGene annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Func_refGene": {
+            "Description": "Func.refGene annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "GERP++_RS": {
+            "Description": "GERP++_RS annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "GERP++_RS_rankscore": {
+            "Description": "GERP++_RS_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "GTEx_V6_gene": {
+            "Description": "GTEx_V6_gene annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "GTEx_V6_tissue": {
+            "Description": "GTEx_V6_tissue annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "GeneDetail_ensGene": {
+            "Description": "GeneDetail.ensGene annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "GeneDetail_refGene": {
+            "Description": "GeneDetail.refGene annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Gene_ensGene": {
+            "Description": "Gene.ensGene annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Gene_pos": {
+            "Description": "Gene_pos annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Gene_refGene": {
+            "Description": "Gene.refGene annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Gene_symbol": {
+            "Description": "Gene_symbol annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "GenoCanyon_score": {
+            "Description": "GenoCanyon_score annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "GenoCanyon_score_rankscore": {
+            "Description": "GenoCanyon_score_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "HaplotypeScore": {
+            "Description": "Consistency of the site with at most two segregating haplotypes",
+            "type": "float"
+        },
+        "ICGC_Id": {
+            "Description": "ICGC_Id annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "ICGC_Occurrence": {
+            "Description": "ICGC_Occurrence annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "InbreedingCoeff": {
+            "Description": "Inbreeding coefficient as estimated from the genotype likelihoods per-sample when compared against the Hardy-Weinberg expectation",
+            "type": "float"
+        },
+        "InterVar_automated": {
+            "Description": "InterVar_automated annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "Interpro_domain": {
+            "Description": "Interpro_domain annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "Kaviar_AC": {
+            "Description": "Kaviar_AC annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "Kaviar_AF": {
+            "Description": "Kaviar_AF annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "Kaviar_AN": {
+            "Description": "Kaviar_AN annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "LRT_converted_rankscore": {
+            "Description": "LRT_converted_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "LRT_pred": {
+            "Description": "LRT_pred annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "LRT_score": {
+            "Description": "LRT_score annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "M-CAP_pred": {
+            "Description": "M-CAP_pred annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "M-CAP_rankscore": {
+            "Description": "M-CAP_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "M-CAP_score": {
+            "Description": "M-CAP_score annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "MCAP": {
+            "Description": "MCAP annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "MLEAC": {
+            "Description": "Maximum likelihood expectation (MLE) for the allele counts (not necessarily the same as the AC), for each ALT allele, in the same order as listed",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "MLEAF": {
+            "Description": "Maximum likelihood expectation (MLE) for the allele frequency (not necessarily the same as the AF), for each ALT allele, in the same order as listed",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "MQ": {
+            "Description": "RMS Mapping Quality",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "MQRankSum": {
+            "Description": "Z-score From Wilcoxon rank sum test of Alt vs. Ref read mapping qualities",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "Mean_MI_score": {
+            "Description": "Mean_MI_score annotation provided by ANNOVAR",
+            "type": "float"
+        },
+        "MetaLR_pred": {
+            "Description": "MetaLR_pred annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "MetaLR_rankscore": {
+            "Description": "MetaLR_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "MetaLR_score": {
+            "Description": "MetaLR_score annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "MetaSVM_pred": {
+            "Description": "MetaSVM_pred annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "MetaSVM_rankscore": {
+            "Description": "MetaSVM_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "MetaSVM_score": {
+            "Description": "MetaSVM_score annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "MutAss_pred_transf": {
+            "Description": "MutAss_pred_transf annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "MutAss_prediction": {
+            "Description": "MutAss_prediction annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "MutAss_score": {
+            "Description": "MutAss_score annotation provided by ANNOVAR",
+            "type": "float"
+        },
+        "MutAss_score_transf": {
+            "Description": "MutAss_score_transf annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "MutationAssessor_pred": {
+            "Description": "MutationAssessor_pred annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "MutationAssessor_score": {
+            "Description": "MutationAssessor_score annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "MutationAssessor_score_rankscore": {
+            "Description": "MutationAssessor_score_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "MutationTaster_converted_rankscore": {
+            "Description": "MutationTaster_converted_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "MutationTaster_pred": {
+            "Description": "MutationTaster_pred annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "MutationTaster_score": {
+            "Description": "MutationTaster_score annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "Mutation_frequency": {
+            "Description": "Mutation_frequency annotation provided by ANNOVAR",
+            "type": "float"
+        },
+        "NCBI_Gene_ID": {
+            "Description": "NCBI_Gene_ID annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "NCBI_Protein_ID": {
+            "Description": "NCBI_Protein_ID annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "NEGATIVE_TRAIN_SITE": {
+            "Description": "This variant was used to build the negative training set of bad variants",
+            "type": "flag"
+        },
+        "OXPHOS_Complex": {
+            "Description": "OXPHOS_Complex annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "PM1": {
+            "Description": "PM1 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "PM2": {
+            "Description": "PM2 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "PM3": {
+            "Description": "PM3 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "PM4": {
+            "Description": "PM4 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "PM5": {
+            "Description": "PM5 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "PM6": {
+            "Description": "PM6 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "POSITIVE_TRAIN_SITE": {
+            "Description": "This variant was used to build the positive training set of good variants",
+            "type": "flag"
+        },
+        "PP1": {
+            "Description": "PP1 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "PP2": {
+            "Description": "PP2 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "PP3": {
+            "Description": "PP3 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "PP4": {
+            "Description": "PP4 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "PP5": {
+            "Description": "PP5 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "PROVEAN_converted_rankscore": {
+            "Description": "PROVEAN_converted_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "PROVEAN_pred": {
+            "Description": "PROVEAN_pred annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "PROVEAN_prediction": {
+            "Description": "PROVEAN_prediction annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "PROVEAN_score": {
+            "Description": "PROVEAN_score annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "PS1": {
+            "Description": "PS1 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "PS2": {
+            "Description": "PS2 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "PS3": {
+            "Description": "PS3 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "PS4": {
+            "Description": "PS4 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "PVS1": {
+            "Description": "PVS1 annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "Perc_coevo_Sites": {
+            "Description": "Perc_coevo_Sites annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "PhastCons_100V": {
+            "Description": "PhastCons_100V annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "PhastCons_46V": {
+            "Description": "PhastCons_46V annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "PhyloP_100V": {
+            "Description": "PhyloP_100V annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "PhyloP_46V": {
+            "Description": "PhyloP_46V annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "PolyPhen2_pred_transf": {
+            "Description": "PolyPhen2_pred_transf annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "PolyPhen2_prediction": {
+            "Description": "PolyPhen2_prediction annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "PolyPhen2_score": {
+            "Description": "PolyPhen2_score annotation provided by ANNOVAR",
+            "type": "float"
+        },
+        "PolyPhen2_score_transf": {
+            "Description": "PolyPhen2_score_transf annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Polyphen2_HDIV_pred": {
+            "Description": "Polyphen2_HDIV_pred annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "Polyphen2_HDIV_rankscore": {
+            "Description": "Polyphen2_HDIV_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "Polyphen2_HDIV_score": {
+            "Description": "Polyphen2_HDIV_score annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "Polyphen2_HVAR_pred": {
+            "Description": "Polyphen2_HVAR_pred annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "Polyphen2_HVAR_rankscore": {
+            "Description": "Polyphen2_HVAR_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "Polyphen2_HVAR_score": {
+            "Description": "Polyphen2_HVAR_score annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "Presence_in_TD": {
+            "Description": "Presence_in_TD annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Prob_N": {
+            "Description": "Prob_N annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Prob_P": {
+            "Description": "Prob_P annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "QD": {
+            "Description": "Variant Confidence/Quality by Depth",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "RAW_MQ": {
+            "Description": "Raw data for RMS Mapping Quality",
+            "type": "float"
+        },
+        "REVEL": {
+            "Description": "REVEL annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "ReadPosRankSum": {
+            "Description": "Z-score from Wilcoxon rank sum test of Alt vs. Ref read position bias",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "SIFT_converted_rankscore": {
+            "Description": "SIFT_converted_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "SIFT_pred": {
+            "Description": "SIFT_pred annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "SIFT_pred_transf": {
+            "Description": "SIFT_pred_transf annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "SIFT_prediction": {
+            "Description": "SIFT_prediction annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "SIFT_score": {
+            "Description": "SIFT_score annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "SIFT_score_transf": {
+            "Description": "SIFT_score_transf annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "SOR": {
+            "Description": "Symmetric Odds Ratio of 2x2 contingency table to detect strand bias",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "SiPhy_29way_logOdds": {
+            "Description": "SiPhy_29way_logOdds annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "SiPhy_29way_logOdds_rankscore": {
+            "Description": "SiPhy_29way_logOdds_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "SiteVar": {
+            "Description": "SiteVar annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Status": {
+            "Description": "Status annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Tumor_site": {
+            "Description": "Tumor_site annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "US": {
+            "Description": "US annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Uniprot_ID": {
+            "Description": "Uniprot_ID annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "Uniprot_Name": {
+            "Description": "Uniprot_Name annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "VEST3_rankscore": {
+            "Description": "VEST3_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "VEST3_score": {
+            "Description": "VEST3_score annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "VQSLOD": {
+            "Description": "Log odds of being a true variant versus being false under the trained gaussian mixture model",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "avsnp150": {
+            "Description": "avsnp150 annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "cosmic70": {
+            "Description": "cosmic70 annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "culprit": {
+            "Description": "The annotation which was the worst performing in the Gaussian mixture model, likely the reason why the variant was filtered out",
+            "type": "keyword"
+        },
+        "cytoBand": {
+            "Description": "cytoBand annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "dbSNP_ID": {
+            "Description": "dbSNP_ID annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "dbscSNV_ADA_SCORE": {
+            "Description": "dbscSNV_ADA_SCORE annotation provided by ANNOVAR",
+            "type": "float"
+        },
+        "dbscSNV_RF_SCORE": {
+            "Description": "dbscSNV_RF_SCORE annotation provided by ANNOVAR",
+            "type": "float"
+        },
+        "esp6500siv2_aa": {
+            "Description": "esp6500siv2_aa annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "esp6500siv2_all": {
+            "Description": "esp6500siv2_all annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "esp6500siv2_ea": {
+            "Description": "esp6500siv2_ea annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "fathmm-MKL_coding_pred": {
+            "Description": "fathmm-MKL_coding_pred annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "fathmm-MKL_coding_rankscore": {
+            "Description": "fathmm-MKL_coding_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "fathmm-MKL_coding_score": {
+            "Description": "fathmm-MKL_coding_score annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "gerp++gt2": {
+            "Description": "gerp++gt2 annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "gnomAD_genome_AFR": {
+            "Description": "gnomAD_genome_AFR annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "gnomAD_genome_ALL": {
+            "Description": "gnomAD_genome_ALL annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "gnomAD_genome_AMR": {
+            "Description": "gnomAD_genome_AMR annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "gnomAD_genome_ASJ": {
+            "Description": "gnomAD_genome_ASJ annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "gnomAD_genome_EAS": {
+            "Description": "gnomAD_genome_EAS annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "gnomAD_genome_FIN": {
+            "Description": "gnomAD_genome_FIN annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "gnomAD_genome_NFE": {
+            "Description": "gnomAD_genome_NFE annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "gnomAD_genome_OTH": {
+            "Description": "gnomAD_genome_OTH annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "gwasCatalog": {
+            "Description": "gwasCatalog annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "integrated_confidence_value": {
+            "Description": "integrated_confidence_value annotation provided by ANNOVAR",
+            "null_value": -999,
+            "type": "integer"
+        },
+        "integrated_fitCons_score": {
+            "Description": "integrated_fitCons_score annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "integrated_fitCons_score_rankscore": {
+            "Description": "integrated_fitCons_score_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "phastCons100way_vertebrate": {
+            "Description": "phastCons100way_vertebrate annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "phastCons100way_vertebrate_rankscore": {
+            "Description": "phastCons100way_vertebrate_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "phastCons20way_mammalian": {
+            "Description": "phastCons20way_mammalian annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "phastCons20way_mammalian_rankscore": {
+            "Description": "phastCons20way_mammalian_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "phyloP100way_vertebrate": {
+            "Description": "phyloP100way_vertebrate annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "phyloP100way_vertebrate_rankscore": {
+            "Description": "phyloP100way_vertebrate_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "phyloP20way_mammalian": {
+            "Description": "phyloP20way_mammalian annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "phyloP20way_mammalian_rankscore": {
+            "Description": "phyloP20way_mammalian_rankscore annotation provided by ANNOVAR",
+            "null_value": -999.99,
+            "type": "float"
+        },
+        "snp138NonFlagged": {
+            "Description": "snp138NonFlagged annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "targetScanS": {
+            "Description": "targetScanS annotation provided by ANNOVAR",
+            "type": "string"
+        },
+        "tfbsConsSites": {
+            "Description": "tfbsConsSites annotation provided by ANNOVAR",
+            "type": "keyword"
+        },
+        "wgRna": {
+            "Description": "wgRna annotation provided by ANNOVAR",
+            "type": "string"
+        }
+    },
+    "num_header_lines": 367
+}

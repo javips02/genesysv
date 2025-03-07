@@ -537,57 +537,60 @@ def get_vep_genes_from_es_for_compound_heterozygous(es, index_name):
 
 
 def get_annovar_genes_from_es_for_compound_heterozygous(es, index_name):
-    compound_heterozygous_query_body_template = """{
-         "_source": ["sample", "CHROM", "ID", "POS", "REF", "Variant", "CSQ_nested"
-         ],
-         "query": {
-             "bool": {
-                 "filter": [
-                     {"nested": {
-                         "path": "sample",
-                         "query": {
-                           "bool": {
-                             "filter": [
-                               {"terms": {"sample.GT": ["0/1", "0|1", "1|0"]}},
-                               {"term": {"sample.Phenotype": "2"}},
-                               {"term": {"sample.Mother_Phenotype": "1"}},
-                               {"term": {"sample.Father_Phenotype": "1"}}
-                             ]
-                           }
-                         },
-                         "score_mode": "none"
+    query = {
+        "_source": ["sample", "CHROM", "ID", "POS", "REF", "Variant", "CSQ_nested"],
+        "query": {
+            "bool": {
+                "filter": [
+                    {
+                        "nested": {
+                            "path": "sample",
+                            "query": {
+                                "bool": {
+                                    "filter": [
+                                        {"terms": {"sample.GT": ["0/1", "0|1", "1|0"]}},
+                                        {"term": {"sample.Phenotype": "2"}},
+                                        {"term": {"sample.Mother_Phenotype": "1"}},
+                                        {"term": {"sample.Father_Phenotype": "1"}}
+                                    ]
+                                }
+                            },
+                            "score_mode": "none"
                         }
-                     }
-                 ],
-                 "must_not" : [
-                     {"terms": {"CHROM": ["X", "Y"]}}
+                    }
                 ],
-                "should" : [
-                     {"terms": {"ExonicFunc_ensGene": ["frameshift_deletion", "frameshift_insertion", "stopgain", "stoploss"]}},
-                     {"terms": {"ExonicFunc_refGene": ["frameshift_deletion", "frameshift_insertion", "stopgain", "stoploss"]}},
-                     {"term": {"Func_ensGene": "splicing"}},
-                     {"term": {"Func_refGene": "splicing"}}
+                "must_not": [
+                    {"terms": {"CHROM": ["X", "Y"]}}
+                ],
+                "should": [
+                    {"terms": {"ExonicFunc_ensGene": ["frameshift_deletion", "frameshift_insertion", "stopgain", "stoploss"]}},
+                    {"terms": {"ExonicFunc_refGene": ["frameshift_deletion", "frameshift_insertion", "stopgain", "stoploss"]}},
+                    {"term": {"Func_ensGene": "splicing"}},
+                    {"term": {"Func_refGene": "splicing"}}
                 ],
                 "minimum_should_match": 1
-             }
-         },
-         "size": 0,
-        "aggs" : {
-            "values" : {
-                "nested" : {
-                    "path" : "AAChange_refGene"
+            }
+        },
+        "size": 0,
+        "aggs": {
+            "values": {
+                "nested": {
+                    "path": "AAChange_refGene"
                 },
-                "aggs" : {
-                    "values" : {"terms" : {"field" : "AAChange_refGene.Gene", "size" : 30000}}
+                "aggs": {
+                    "values": {
+                        "terms": {
+                            "field": "AAChange_refGene.Gene",
+                            "size": 30000
+                        }
+                    }
                 }
             }
         }
-        }"""
+    }
 
-    results = es.search(index=index_name,
-                        body=compound_heterozygous_query_body_template, request_timeout=120)
+    results = es.search(index=index_name, body=query, request_timeout=120)
     return natsorted([ele['key'] for ele in results["aggregations"]["values"]["values"]["buckets"] if ele['key']])
-
 
 def get_values_from_es(es, index_name, field_es_name, field_path):
 
@@ -622,9 +625,9 @@ def get_values_from_es(es, index_name, field_es_name, field_path):
                 }
             }
         """
-        body = body_nested_template % (field_path,
+        body = json.loads(body_nested_template % (field_path,
                                        field_path,
-                                       field_es_name)
+                                       field_es_name))
 
         results = es.search(index=index_name, body=body, request_timeout=120)
         return [ele['key'] for ele in results["aggregations"]["values"]["values"]["buckets"] if ele['key']]
@@ -661,7 +664,7 @@ def get_family_dict(es, index_name):
     family_dict = {}
     for family_id in family_ids:
 
-        body = body_template % (family_id)
+        body = json.loads(body_template % (family_id))
         results = es.search(index=index_name, body=body, request_timeout=120)
 
         result = results['hits']['hits'][0]['inner_hits']['sample']['hits']['hits'][0]["_source"]
@@ -802,7 +805,7 @@ def annotate_autosomal_recessive(es, index_name,family_dict, annotation):
                 actions = []
 
         helpers.bulk(es, actions, refresh=True)
-        es.indices.refresh(index_name)
+        es.indices.refresh(index=index_name)
         es.cluster.health(wait_for_no_relocating_shards=True)
 
 
@@ -872,7 +875,7 @@ def annotate_denovo(es, index_name, family_dict):
                 actions = []
 
         helpers.bulk(es, actions, refresh=True)
-        es.indices.refresh(index_name)
+        es.indices.refresh(index=index_name)
         es.cluster.health(wait_for_no_relocating_shards=True)
 
 
@@ -944,7 +947,7 @@ def annotate_autosomal_dominant(es, index_name, family_dict):
                     actions = []
 
         helpers.bulk(es, actions, refresh=True)
-        es.indices.refresh(index_name)
+        es.indices.refresh(index=index_name)
         es.cluster.health(wait_for_no_relocating_shards=True)
 
 
@@ -1030,7 +1033,7 @@ def annotate_x_linked_dominant(es, index_name, family_dict):
                     actions = []
 
         helpers.bulk(es, actions, refresh=True)
-        es.indices.refresh(index_name)
+        es.indices.refresh(index=index_name)
         es.cluster.health(wait_for_no_relocating_shards=True)
 
 
@@ -1122,7 +1125,7 @@ def annotate_x_linked_recessive(es, index_name, family_dict, annotation):
                     actions = []
 
         helpers.bulk(es, actions, refresh=True)
-        es.indices.refresh(index_name)
+        es.indices.refresh(index=index_name)
         es.cluster.health(wait_for_no_relocating_shards=True)
 
     print('Found {} x_linked_recessive samples'.format(len(list(set(sample_matched)))))
@@ -1203,7 +1206,7 @@ def annotate_x_linked_denovo(es, index_name, family_dict):
                     actions = []
 
         helpers.bulk(es, actions, refresh=True)
-        es.indices.refresh(index_name)
+        es.indices.refresh(index=index_name)
         es.cluster.health(wait_for_no_relocating_shards=True)
 
 
@@ -1255,7 +1258,7 @@ def annotate_compound_heterozygous(es, index_name, family_dict, annotation):
                 for sample in samples:
                     es_id = sample.pop("es_id")
 
-                    es_document = es.get(index_name, es_id)
+                    es_document = es.get(index=index_name, id=es_id)
                     sample_array = es_document["_source"]["sample"]
                     sample = pop_sample_with_id(sample_array, child_id)
 
@@ -1300,7 +1303,7 @@ def annotate_compound_heterozygous(es, index_name, family_dict, annotation):
                         actions = []
 
                 helpers.bulk(es, actions, refresh=True)
-                es.indices.refresh(index_name)
+                es.indices.refresh(index=index_name)
                 es.cluster.health(wait_for_no_relocating_shards=True)
 
 

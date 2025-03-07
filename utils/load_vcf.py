@@ -1055,7 +1055,9 @@ def process_line_data(variant_lines, log, f, vcf_info):
 
 		result = parse_sample_info(result, format_fields, sample_info, log, vcf_info)
 
-		json.dump({"_index" : index_name, "_type" : '_doc', "_source" : result}, f, ensure_ascii=True)
+		# json.dump({"_index" : index_name, "_type" : '_doc', "_source" : result}, f, ensure_ascii=True)
+		# Removed _type keyword and value for new elasticsearch 8+ compatibility
+		json.dump({"_index" : index_name, "_source" : result}, f, ensure_ascii=True)
 		f.write("\n")
 
 
@@ -1277,7 +1279,9 @@ def parse_case_control(case_vcf, control_vcf, batch_sub_list, outfile, vcf_info)
 						result[v_id].update(result_sample)
 
 			for v_id in result:
-				json.dump({"_index" : index_name, "_type" : '_doc', "_source": result[v_id]}, f, ensure_ascii=True)
+				# json.dump({"_index" : index_name, "_type" : '_doc', "_source": result[v_id]}, f, ensure_ascii=True)
+				# Changed the dump order not to include doctype, new version of elasticsearch does not use it and causes indexation error.
+				json.dump({"_index" : index_name, "_source": result[v_id]}, f, ensure_ascii=True)
 				f.write("\n")
 
 		print("Pid %s: finished processing %s, batch %d of %d" % (p.pid, batch, batch_count, total_batches))
@@ -1573,161 +1577,165 @@ def put_mendelian_to_es(es, index_name,  annotation):
 
 
 if __name__ == '__main__':
-	t0 = time.time() # get program start time
+    t0 = time.time()  # get program start time
 
-	dir_path = os.path.dirname(os.path.realpath(__file__))
-	create_index_script = os.path.join(dir_path,  'scripts', 'create_index_%s_and_put_mapping.sh' % index_name)
-	mapping_file = os.path.join(dir_path,  'scripts', '%s_mapping.json' % index_name)
-	out_vcf_info = os.path.basename(vcf).replace('.vcf.gz', '') + '_vcf_info.json'
-	out_vcf_info = os.path.join(os.getcwd(),  'config', out_vcf_info)
-	output_files = []
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    create_index_script = os.path.join(dir_path, 'scripts', 'create_index_%s_and_put_mapping.sh' % index_name)
+    mapping_file = os.path.join(dir_path, 'scripts', '%s_mapping.json' % index_name)
+    out_vcf_info = os.path.basename(vcf).replace('.vcf.gz', '') + '_vcf_info.json'
+    out_vcf_info = os.path.join(os.getcwd(), 'config', out_vcf_info)
+    output_files = []
 
-	es = elasticsearch.Elasticsearch( host=hostname, port=port, request_timeout=300, max_retries=10, timeout=300, read_timeout=800)
-	es.cluster.health(wait_for_status='yellow')
+    es = elasticsearch.Elasticsearch(
+        hosts=[{"host": hostname, "port": port, "scheme": "http"}],
+        request_timeout=300,
+        max_retries=10,
+        verify_certs=True,
+        ssl_show_warn=True
+    )
+    es.cluster.health(wait_for_status='yellow')
 
-	# append assembly version to dataset name
-	dataset_name += '_' + assembly
+    # append assembly version to dataset name
+    dataset_name += '_' + assembly
 
-	# make sure the destination dataset not exists
-	conn = sqlite3.connect('db.sqlite3')
-	c = conn.cursor()
+    # make sure the destination dataset not exists
+    conn = sqlite3.connect('db.sqlite3')
+    c = conn.cursor()
 
+    query = "DELETE FROM core_dataset WHERE name = '" + dataset_name + "'"
+    try:
+        c.execute(query)
+    except Exception as e:
+        print("Sqlite error: %s" % e)
 
-	query = "DELETE FROM core_dataset WHERE name = '" + dataset_name + "'"
-	try:
-		c.execute(query)
-	except Exception as e:
-		print("Sqlite error: %s" % e)
+    conn.commit()
+    conn.close()
 
-	conn.commit()
-	conn.close()
+    if gui_only:
+        gui_mapping_file = os.path.join("config", index_name + '_gui_config.json')
+        with open(gui_mapping_file) as f:
+            gui_mapping = json.load(f)
+            make_gui(es, hostname, port, index_name, study, dataset_name, gui_mapping)
+    else:
+        case_control = False
+        if control_vcf:
+            case_control = True
 
-	if gui_only:
-		gui_mapping_file = os.path.join("config", index_name + '_gui_config.json')
-		with open(gui_mapping_file) as f:
-			gui_mapping = json.load(f)
-			make_gui(es, hostname, port, index_name, study, dataset_name,  gui_mapping)
-	else:
-		case_control = False
-		if control_vcf:
-			case_control = True
+        if not skip_parsing:
+            check_commandline(vcf, control_vcf, annot)
 
-		if not skip_parsing:
-			check_commandline(vcf, control_vcf, annot)
+            # read and process vcf header section to get various field names and data types
+            rv = process_vcf_header(vcf)
 
-			# read and process vcf header section to get various field names and data types
-			rv = process_vcf_header(vcf)
+            if annot == 'vep':
+                vcf_info = dict(zip(['num_header_lines', 'csq_fields', 'col_header', 'chr2len', 'info_dict', 'format_dict', 'contig_dict', 'csq_dict_local', 'csq_dict_global'], rv))
+            elif annot == 'annovar':
+                vcf_info = dict(zip(['num_header_lines', 'col_header', 'chr2len', 'info_dict', 'format_dict', 'contig_dict'], rv))
 
+            if control_vcf:
+                rv2 = process_vcf_header(control_vcf)
+                vcf_info2 = dict(zip(['num_header_lines', 'csq_fields', 'col_header', 'chr2len', 'info_dict', 'format_dict', 'contig_dict', 'csq_dict_local', 'csq_dict_global'], rv2))
+                vcf_info['info_dict'] = {**vcf_info['info_dict'], **vcf_info2['info_dict']}
 
-			if annot == 'vep':
-				vcf_info = dict(zip([ 'num_header_lines', 'csq_fields', 'col_header', 'chr2len', 'info_dict', 'format_dict', 'contig_dict', 'csq_dict_local', 'csq_dict_global'], rv))
-			elif annot == 'annovar':
-				vcf_info = dict(zip([ 'num_header_lines', 'col_header', 'chr2len', 'info_dict', 'format_dict', 'contig_dict'], rv))
-
-			if control_vcf:
-				rv2 = process_vcf_header(control_vcf)
-				vcf_info2 = dict(zip([ 'num_header_lines', 'csq_fields', 'col_header', 'chr2len', 'info_dict', 'format_dict', 'contig_dict', 'csq_dict_local', 'csq_dict_global'], rv2))
-				vcf_info['info_dict'] = {**vcf_info['info_dict'], **vcf_info2['info_dict']}
-
-			# read 5000 lines of data to verify data types for each field extracted from vcf header by the above function
-			vcf_info = process_vcf_data(vcf, 5000, vcf_info)
-
-
-			with open(out_vcf_info, 'w') as f:
-				json.dump(vcf_info, f, sort_keys=True, indent=4, ensure_ascii=True)
-
-			# insert pedegree data if ped file is specified
-			if ped:
-				ped_info = process_ped_file(ped)
-				vcf_info['ped_info'] = ped_info
-
-			# determine which work flow to choose, i.e. single cohort or case-control analysis
-			if control_vcf:
-				output_files = process_case_control(vcf, control_vcf, vcf_info)
-			else:
-				output_files = process_single_cohort(vcf, vcf_info)
-
-			t1 = time.time()
-			parsing_time = t1-t0
-
-			print("Finished parsing vcf file in %s seconds, now creating ElasticSearch index ..." % parsing_time)
+            # read 5000 lines of data to verify data types for each field extracted from vcf header by the above function
+            vcf_info = process_vcf_data(vcf, 5000, vcf_info)
 
 
-			create_index_script, mapping_file = make_es_mapping(vcf_info)
+            with open(out_vcf_info, 'w') as f:
+                json.dump(vcf_info, f, sort_keys=True, indent=4, ensure_ascii=True)
 
-		else:
+            # insert pedegree data if ped file is specified
+            if ped:
+                ped_info = process_ped_file(ped)
+                vcf_info['ped_info'] = ped_info
 
-			for i in range(num_cpus):
-				output_file = os.path.join(tmp_dir, os.path.basename(vcf) + '.chunk_' + str(i) + '.json')
-				output_files.append(output_file)
+            # determine which work flow to choose, i.e. single cohort or case-control analysis
+            if control_vcf:
+                output_files = process_case_control(vcf, control_vcf, vcf_info)
+            else:
+                output_files = process_single_cohort(vcf, vcf_info)
 
+            t1 = time.time()
+            parsing_time = t1-t0
 
-		# prepare for elasticsearch
-		if es.indices.exists(index_name):
-			print("deleting '%s' index..." % index_name)
-			res = es.indices.delete(index = index_name)
-			print("response: '%s'" % res)
-
-		print("creating '%s' index..." % index_name)
-		res = check_output(["bash", create_index_script])
-		print("Response: '%s'" % res.decode('ascii'))
-
-
-		for infile in output_files:
-			print("Indexing file %s" % infile)
-			data = []
-			index_start = time.time()
-
-			with open(infile, 'r') as fp:
-				for line in fp:
-					tmp = json.loads(line)
-					data.append(tmp)
-					if len(data) % 1000 == 0:
-						try:
-							deque(helpers.parallel_bulk(es, data, thread_count=num_cpus, raise_on_exception=False), maxlen=0)
-							data = []
-						except ValueError as e:
-							print("Failed indexing %s" % e)
-							continue
-			# leftover data
-			try:
-				deque(helpers.parallel_bulk(es, data, thread_count=num_cpus), maxlen=0)
-			except:
-				continue
-			# report indexing time
-			index_end = time.time()
-			index_time = index_end - index_start
-			print("Took: %s seconds"% index_time)
+            print("Finished parsing vcf file in %s seconds, now creating ElasticSearch index ..." % parsing_time)
 
 
-		t2 = time.time()
-		indexing_time = t2 - t1
+            create_index_script, mapping_file = make_es_mapping(vcf_info)
 
-		print("Finished creating ES index, parsing time: %s seconds, indexing time: %s seconds, vcf: %s\n" % (parsing_time, indexing_time, vcf))
+        else:
 
-		#  make a gui config file
-		print("Creating Web user interface, please wait ...")
-
-		gui_mapping = make_gui_config(out_vcf_info, mapping_file, index_name,  annot, case_control, ped)
+            for i in range(num_cpus):
+                output_file = os.path.join(tmp_dir, os.path.basename(vcf) + '.chunk_' + str(i) + '.json')
+                output_files.append(output_file)
 
 
-		make_gui(es, hostname, port, index_name, study, dataset_name,  gui_mapping)
+        # prepare for elasticsearch
+        if es.indices.exists(index=index_name):
+            print("deleting '%s' index..." % index_name)
+            res = es.indices.delete(index = index_name)
+            print("response: '%s'" % res)
 
-		print("*"*80+"\n")
-		print("Successfully imported VCF file. You can now explore your data at %s:%s" % (hostname, webserver_port))
-
-		t3 = time.time()
-		gui_time = t3 - t2
-
-		print("Success, vcf parsing: %s, indexing: %s, GUI creation: %s, VCF: %s\n" % (parsing_time/60, indexing_time/60, gui_time/60, vcf))
-
-	# annotate variants for Mendelian inheritance and insert results back to es index
-	if ped:
-		put_mendelian_to_es(es, index_name,  annot)
+        print("creating '%s' index..." % index_name)
+        res = check_output(["bash", create_index_script])
+        print("Response: '%s'" % res.decode('ascii'))
 
 
-	# clean up
-	if cleanup:
-		for infile in output_files:
-			print("Deleting %s..." % infile)
-			os.remove(infile)
+        for infile in output_files:
+            print("Indexing file %s" % infile)
+            data = []
+            index_start = time.time()
+
+            with open(infile, 'r') as fp:
+                for line in fp:
+                    tmp = json.loads(line)
+                    data.append(tmp)
+                    if len(data) % 1000 == 0:
+                        try:
+                            deque(helpers.parallel_bulk(es, data, thread_count=num_cpus, raise_on_exception=False), maxlen=0)
+                            data = []
+                        except ValueError as e:
+                            print("Failed indexing %s" % e)
+                            continue
+            # leftover data
+            try:
+                deque(helpers.parallel_bulk(es, data, thread_count=num_cpus), maxlen=0)
+            except:
+                continue
+            # report indexing time
+            index_end = time.time()
+            index_time = index_end - index_start
+            print("Took: %s seconds"% index_time)
+
+
+        t2 = time.time()
+        indexing_time = t2 - t1
+
+        print("Finished creating ES index, parsing time: %s seconds, indexing time: %s seconds, vcf: %s\n" % (parsing_time, indexing_time, vcf))
+
+        #  make a gui config file
+        print("Creating Web user interface, please wait ...")
+
+        gui_mapping = make_gui_config(out_vcf_info, mapping_file, index_name,  annot, case_control, ped)
+
+
+        make_gui(es, hostname, port, index_name, study, dataset_name,  gui_mapping)
+
+        print("*"*80+"\n")
+        print("Successfully imported VCF file. You can now explore your data at %s:%s" % (hostname, webserver_port))
+
+        t3 = time.time()
+        gui_time = t3 - t2
+
+        print("Success, vcf parsing: %s, indexing: %s, GUI creation: %s, VCF: %s\n" % (parsing_time/60, indexing_time/60, gui_time/60, vcf))
+
+    # annotate variants for Mendelian inheritance and insert results back to es index
+    if ped:
+        put_mendelian_to_es(es, index_name,  annot)
+
+
+    # clean up
+    if cleanup:
+        for infile in output_files:
+            print("Deleting %s..." % infile)
+            os.remove(infile)

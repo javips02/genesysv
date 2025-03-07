@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Test de carga vcf",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "./utils/load_vcf.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--vcf", "test_data/test_4families_annovar.vcf.gz",
+                "--tmp_dir", "/tmp",
+                "--annot", "annovar",
+                "--hostname", "127.0.0.1",
+                "--port", "9200",
+                "--index", "test_4families_annovar",
+                "--study_name", "test_4families_annovar",
+                "--dataset_name", "test_4families_annovar",
+                "--num_cores", "4",
+                "--assembly", "hg19",
+                "--ped", "test_data/test_4families.ped",
+                "--cleanup"
+            ]
+        }
+    ]
+}
